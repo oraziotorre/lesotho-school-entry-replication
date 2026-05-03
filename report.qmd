@@ -1,17 +1,17 @@
 ---
 title: "CCA `CompEcon` Replication Project"
-subtitle: "Replication of xxxx by i,j and k (AER, 2024)"
+subtitle: "Replication of xxxx by i, j and k (AER, 2024)"
 author: 
-  - name: Student 1
-    orcid: 0000-0000-0000-0000
-    email: your.email@com
-    affiliations: Uni Turin, Collegio Carlo Alberto
-  - name: Student 2
-    orcid: 0000-0000-0000-0000
-    email: your.email@com
-    affiliations: Uni Turin, Collegio Carlo Alberto
+  - name: Orazio Torre
+    affiliations: Politecnico di Torino; Collegio Carlo Alberto
+    email: ...
+  - name: Dalila Maria Tamburrano
+    affiliations: Politecnico di Torino; Collegio Carlo Alberto
+    email: ...
+  - name: Dalia Lemmi
+    affiliations: Politecnico di Torino; Collegio Carlo Alberto
+    email: ...
 ---
-
 
 ::: {.callout-note}
 
