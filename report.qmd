@@ -10,7 +10,7 @@ author:
     email: ...
   - name: Dalia Lemmi
     affiliations: Politecnico di Torino; Collegio Carlo Alberto
-    email: ...
+    email: dalia.lemmi@carloalberto.org
 ---
 
 ::: {.callout-note}
