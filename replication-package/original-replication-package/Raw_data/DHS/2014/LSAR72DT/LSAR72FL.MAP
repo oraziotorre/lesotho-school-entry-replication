@@ -1,0 +1,55 @@
+﻿                                                   LSAR72FL
+                                                LSAR72FL_DICT
+
+                                        C:\Countries\LS72\LSAR72FL.DCF
+                                    Last Modified:  3/24/2017  12:38:14 PM
+
+--------------------------------------------------------------------------------------------------------------
+Level Name                    Level Label                                                  Type            Rec
+  Record Name                   Record Label                                              Value  Req  Max  Len
+--------------------------------------------------------------------------------------------------------------
+TEST                          HIVData questionnaire
+  HIVREC                        HIVData record                                                   Yes    1   49
+Level: HIVData questionnaire                           Record: HIVData record
+--------------------------------------------------------------------------------------------------------------
+                                                                                 Data Item            Dec Zero
+Item Name              Item Label                                     Start  Len Type Type  Occ  Dec Char Fill
+--------------------------------------------------------------------------------------------------------------
+                         (record type)                                    0    0   AN    I    1    0   No   No
+HIVCLUST          (id) Cluster                                            1    8    N    I    1    0   No   No
+HIVNUMB           (id) Household                                          9    4    N    I    1    0   No   No
+HIVLINE           (id) Line                                              13    3    N    I    1    0   No   No
+HIV01                  Bar code                                          16    6   AN    I    1    0   No   No
+HIV02                  Lab number                                        22    6    N    I    1    0   No   No
+HIV03                  Blood test result                                 28    1    N    I    1    0   No   No
+                               0  HIV negative
+                               1  HIV  positive
+                               2  HIV2 positive
+                               3  HIV1 & HIV2 positive
+                               4  ERROR : V-, W+, M+
+                               5  ERROR : V-, W+, M-
+                               6  ERROR : V-, W-, M+
+                               7  Indeterminant
+                          (na)    
+HIV05                  Sample weight                                     29    8    N    I    1    0   No   No
+SLAGODN                LAg normalized OD (3 decimals)                    37    5    N    I    1    0   No   No
+SVIRAL                 Viral load                                        42    6    N    I    1    0   No   No
+                               0:999990  
+                               999991    Target not detected
+                               999992    Viral load less than 550 c/mL
+                               999993    Technical error
+                               999994    Insufficient specimen volume
+                           (m) 999999    Missing
+SPRELIM                Preliminary recent status                         48    1    N    I    1    0   No   No
+                               1  Preliminary recent
+                               2  Long term
+                               3  HIV negative
+SRECENT                Final recent status                               49    1    N    I    1    0   No   No
+                               1  Recent
+                               2  Long term
+                               3  HIV negative
+                               7  HIV Indeterminant
+                               9  Recency missing
+--------------------------------------------------------------------------------------------------------------
+Relation Name         Primary               Linked by             Secondary             Linked by
+--------------------------------------------------------------------------------------------------------------
