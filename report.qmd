@@ -7,7 +7,7 @@ author:
     email: ...
   - name: Dalila Maria Tamburrano
     affiliations: Politecnico di Torino; Collegio Carlo Alberto
-    email: ...
+    email: dalila.tamburrano@carloalberto.org
   - name: Dalia Lemmi
     affiliations: Politecnico di Torino; Collegio Carlo Alberto
     email: dalia.lemmi@carloalberto.org
