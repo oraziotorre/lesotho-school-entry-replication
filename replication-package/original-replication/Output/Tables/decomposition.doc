@@ -1,0 +1,26 @@
+{\rtf1\fs24
+\pard\qc
+Decomposition exercice\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx1872\clbrdrt\brdrs\cellx3168\clbrdrt\brdrs\cellx4608\clbrdrt\brdrs\cellx6048\clbrdrt\brdrs\cellx7344\clbrdrt\brdrs\cellx8640\clbrdrt\brdrs\cellx10512
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\qc (6)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3168\cellx4608\cellx6048\cellx7344\cellx8640\cellx10512
+\ql \cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3168\cellx4608\cellx6048\cellx7344\cellx8640\cellx10512
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3168\clbrdrb\brdrs\cellx4608\clbrdrb\brdrs\cellx6048\clbrdrb\brdrs\cellx7344\clbrdrb\brdrs\cellx8640\clbrdrb\brdrs\cellx10512
+\ql VARIABLES\cell\qc Literacy\cell\qc Kids\cell\qc Marriage\cell\qc Skill\cell\qc WI\cell\qc Spousal educ\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3168\cellx4608\cellx6048\cellx7344\cellx8640\cellx10512
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql eduyrs\cell\qc 0.047***\cell\qc -0.110***\cell\qc -0.017***\cell\qc 0.032***\cell\qc 0.222***\cell\qc 0.784***\cell\row
+\ql \cell\qc (0.001)\cell\qc (0.003)\cell\qc (0.001)\cell\qc (0.001)\cell\qc (0.002)\cell\qc (0.011)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 25,321\cell\qc 25,321\cell\qc 25,321\cell\qc 25,321\cell\qc 25,321\cell\qc 12,183\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3168\clbrdrb\brdrs\cellx4608\clbrdrb\brdrs\cellx6048\clbrdrb\brdrs\cellx7344\clbrdrb\brdrs\cellx8640\clbrdrb\brdrs\cellx10512
+\ql R-squared\cell\qc 0.370\cell\qc 0.517\cell\qc 0.337\cell\qc 0.122\cell\qc 0.266\cell\qc 0.354\cell\row
+
+\pard\qc\sb79\sa79\fs29 \par
+\trowd\intbl\trautofit1\trgaph144\sb79\sa79\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1680\clbrdrt\brdrs\cellx2856\clbrdrt\brdrs\cellx4200\clbrdrt\brdrs\cellx5376\clbrdrt\brdrs\cellx6552\clbrdrt\brdrs\cellx8232\fs24 \ql \cell \qc Literacy\cell \qc Kids\cell \qc Marriage\cell \qc Skill\cell \qc WI\cell \qc Spouse edu\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1680\clbrdrt\brdrs\cellx2856\clbrdrt\brdrs\cellx4200\clbrdrt\brdrs\cellx5376\clbrdrt\brdrs\cellx6552\clbrdrt\brdrs\cellx8232\fs24 \pard\intbl\ql DV\cell \pard\intbl\tqdec\tx606 {\fs24 0.896}\cell \pard\intbl\tqdec\tx538 {\fs24 2.074}\cell \pard\intbl\tqdec\tx606 {\fs24 0.712}\cell \pard\intbl\tqdec\tx538 {\fs24 0.134}\cell \pard\intbl\tqdec\tx538 {\fs24 3.110}\cell \pard\intbl\tqdec\tx743 {\fs24 5.689}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\clbrdrb\brdrs\cellx336\clbrdrb\brdrs\cellx1680\clbrdrb\brdrs\cellx2856\clbrdrb\brdrs\cellx4200\clbrdrb\brdrs\cellx5376\clbrdrb\brdrs\cellx6552\clbrdrb\brdrs\cellx8232\fs24 \pard\intbl\ql \cell \pard\intbl\tqdec\tx606 {\fs20 (0.002)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.009)}\cell \pard\intbl\tqdec\tx606 {\fs20 (0.002)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.002)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.008)}\cell \pard\intbl\tqdec\tx743 {\fs20 (0.030)}\cell\row
+\pard\qc\sb0\sa79\fs19 DV shows mean dependent variable. Robust standard errors in parentheses. *** {\i p}<0.01, ** {\i p}<0.05, * {\i p}<0.1\par
+\pard\sb0\sa0\fs24\par
+}

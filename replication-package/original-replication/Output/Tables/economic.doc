@@ -1,0 +1,26 @@
+{\rtf1\fs24
+\pard\qc
+Economic outcomes among adults\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx1872\clbrdrt\brdrs\cellx3168\clbrdrt\brdrs\cellx4320\clbrdrt\brdrs\cellx5472\clbrdrt\brdrs\cellx6768\clbrdrt\brdrs\cellx8064
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3168\cellx4320\cellx5472\cellx6768\cellx8064
+\ql \cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\qc Census\cell\qc Census\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3168\cellx4320\cellx5472\cellx6768\cellx8064
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3168\clbrdrb\brdrs\cellx4320\clbrdrb\brdrs\cellx5472\clbrdrb\brdrs\cellx6768\clbrdrb\brdrs\cellx8064
+\ql VARIABLES\cell\qc Worked12\cell\qc Agri\cell\qc Skill\cell\qc Employed\cell\qc Skill\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3168\cellx4320\cellx5472\cellx6768\cellx8064
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql birthmo_jul\cell\qc 0.013\cell\qc -0.011\cell\qc 0.018**\cell\qc 0.021**\cell\qc 0.023***\cell\row
+\ql \cell\qc (0.012)\cell\qc (0.011)\cell\qc (0.009)\cell\qc (0.009)\cell\qc (0.005)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 25,200\cell\qc 25,200\cell\qc 25,200\cell\qc 67,620\cell\qc 67,620\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3168\clbrdrb\brdrs\cellx4320\clbrdrb\brdrs\cellx5472\clbrdrb\brdrs\cellx6768\clbrdrb\brdrs\cellx8064
+\ql R-squared\cell\qc 0.097\cell\qc 0.101\cell\qc 0.028\cell\qc 0.128\cell\qc 0.026\cell\row
+
+\pard\qc\sb79\sa79\fs29 \par
+\trowd\intbl\trautofit1\trgaph144\sb79\sa79\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1680\clbrdrt\brdrs\cellx2856\clbrdrt\brdrs\cellx4032\clbrdrt\brdrs\cellx5376\clbrdrt\brdrs\cellx6552\fs24 \ql \cell \qc Worked12\cell \qc Agri\cell \qc Skill\cell \qc Employed\cell \qc Skill\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1680\clbrdrt\brdrs\cellx2856\clbrdrt\brdrs\cellx4032\clbrdrt\brdrs\cellx5376\clbrdrt\brdrs\cellx6552\fs24 \pard\intbl\ql DV\cell \pard\intbl\tqdec\tx606 {\fs24 0.523}\cell \pard\intbl\tqdec\tx538 {\fs24 0.321}\cell \pard\intbl\tqdec\tx538 {\fs24 0.127}\cell \pard\intbl\tqdec\tx606 {\fs24 0.461}\cell \pard\intbl\tqdec\tx538 {\fs24 0.090}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\clbrdrb\brdrs\cellx336\clbrdrb\brdrs\cellx1680\clbrdrb\brdrs\cellx2856\clbrdrb\brdrs\cellx4032\clbrdrb\brdrs\cellx5376\clbrdrb\brdrs\cellx6552\fs24 \pard\intbl\ql \cell \pard\intbl\tqdec\tx606 {\fs20 (0.008)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.008)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.006)}\cell \pard\intbl\tqdec\tx606 {\fs20 (0.007)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.004)}\cell\row
+\pard\qc\sb0\sa79\fs19 DV shows mean dependent variable at lower limit. Robust standard errors in parentheses. *** {\i p}<0.01, ** {\i p}<0.05, * {\i p}<0.1\par
+\pard\sb0\sa0\fs24\par
+}

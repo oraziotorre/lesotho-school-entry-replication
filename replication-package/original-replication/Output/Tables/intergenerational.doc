@@ -1,0 +1,28 @@
+{\rtf1\fs24
+\pard\qc
+Intergenerational impacts\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx2304\clbrdrt\brdrs\cellx3600\clbrdrt\brdrs\cellx5184\clbrdrt\brdrs\cellx6624\clbrdrt\brdrs\cellx8064\clbrdrt\brdrs\cellx9360
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2304\cellx3600\cellx5184\cellx6624\cellx8064\cellx9360
+\ql \cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\qc MICS\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2304\cellx3600\cellx5184\cellx6624\cellx8064\cellx9360
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx2304\clbrdrb\brdrs\cellx3600\clbrdrb\brdrs\cellx5184\clbrdrb\brdrs\cellx6624\clbrdrb\brdrs\cellx8064\clbrdrb\brdrs\cellx9360
+\ql VARIABLES\cell\qc Survival\cell\qc Under-five\cell\qc Deaths\cell\qc Anymort\cell\qc Survival\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2304\cellx3600\cellx5184\cellx6624\cellx8064\cellx9360
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql birthmo_jul_mom\cell\qc 0.011*\cell\qc 0.020*\cell\qc \cell\qc \cell\qc 0.023**\cell\row
+\ql \cell\qc (0.006)\cell\qc (0.012)\cell\qc \cell\qc \cell\qc (0.011)\cell\row
+\ql birthmo_jul\cell\qc \cell\qc \cell\qc -0.045***\cell\qc -0.039***\cell\qc \cell\row
+\ql \cell\qc \cell\qc \cell\qc (0.017)\cell\qc (0.011)\cell\qc \cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 40,648\cell\qc 10,288\cell\qc 18,219\cell\qc 18,219\cell\qc 11,307\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx2304\clbrdrb\brdrs\cellx3600\clbrdrb\brdrs\cellx5184\clbrdrb\brdrs\cellx6624\clbrdrb\brdrs\cellx8064\clbrdrb\brdrs\cellx9360
+\ql R-squared\cell\qc 0.009\cell\qc 0.007\cell\qc 0.087\cell\qc 0.085\cell\qc 0.017\cell\row
+
+\pard\qc\sb79\sa79\fs29 \par
+\trowd\intbl\trautofit1\trgaph144\sb79\sa79\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1680\clbrdrt\brdrs\cellx3360\clbrdrt\brdrs\cellx4536\clbrdrt\brdrs\cellx5712\clbrdrt\brdrs\cellx7056\fs24 \ql \cell \qc Survival\cell \qc Under-five\cell \qc Deaths\cell \qc Anymort\cell \qc Survival\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1680\clbrdrt\brdrs\cellx3360\clbrdrt\brdrs\cellx4536\clbrdrt\brdrs\cellx5712\clbrdrt\brdrs\cellx7056\fs24 \pard\intbl\ql DV\cell \pard\intbl\tqdec\tx606 {\fs24 0.891}\cell \pard\intbl\tqdec\tx743 {\fs24 0.897}\cell \pard\intbl\tqdec\tx538 {\fs24 0.255}\cell \pard\intbl\tqdec\tx538 {\fs24 0.192}\cell \pard\intbl\tqdec\tx606 {\fs24 0.903}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\clbrdrb\brdrs\cellx336\clbrdrb\brdrs\cellx1680\clbrdrb\brdrs\cellx3360\clbrdrb\brdrs\cellx4536\clbrdrb\brdrs\cellx5712\clbrdrb\brdrs\cellx7056\fs24 \pard\intbl\ql \cell \pard\intbl\tqdec\tx606 {\fs20 (0.004)}\cell \pard\intbl\tqdec\tx743 {\fs20 (0.008)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.012)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.008)}\cell \pard\intbl\tqdec\tx606 {\fs20 (0.008)}\cell\row
+\pard\qc\sb0\sa79\fs19 DV shows mean dependent variable at lower limit. Robust standard errors in parentheses. *** {\i p}<0.01, ** {\i p}<0.05, * {\i p}<0.1\par
+\pard\sb0\sa0\fs24\par
+}

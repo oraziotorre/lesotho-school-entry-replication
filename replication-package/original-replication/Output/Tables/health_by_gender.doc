@@ -1,0 +1,26 @@
+{\rtf1\fs24
+\pard\qc
+Health outcomes by gender\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx1872\clbrdrt\brdrs\cellx3312\clbrdrt\brdrs\cellx4464\clbrdrt\brdrs\cellx5904\clbrdrt\brdrs\cellx7056\clbrdrt\brdrs\cellx8496\clbrdrt\brdrs\cellx9648\clbrdrt\brdrs\cellx11088\clbrdrt\brdrs\cellx12240
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\qc (6)\cell\qc (7)\cell\qc (8)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4464\cellx5904\cellx7056\cellx8496\cellx9648\cellx11088\cellx12240
+\ql \cell\qc Female\cell\qc Male\cell\qc Female\cell\qc Male\cell\qc Female\cell\qc Male\cell\qc Female\cell\qc Male\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4464\cellx5904\cellx7056\cellx8496\cellx9648\cellx11088\cellx12240
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4464\clbrdrb\brdrs\cellx5904\clbrdrb\brdrs\cellx7056\clbrdrb\brdrs\cellx8496\clbrdrb\brdrs\cellx9648\clbrdrb\brdrs\cellx11088\clbrdrb\brdrs\cellx12240
+\ql VARIABLES\cell\qc Married\cell\qc Married\cell\qc Kids\cell\qc Kids\cell\qc K <20\cell\qc K <20\cell\qc M <20\cell\qc M <20\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4464\cellx5904\cellx7056\cellx8496\cellx9648\cellx11088\cellx12240
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql birthmo_jul\cell\qc -0.032***\cell\qc -0.029\cell\qc -0.209***\cell\qc -0.089\cell\qc -0.045***\cell\qc -0.015\cell\qc -0.044***\cell\qc -0.013\cell\row
+\ql \cell\qc (0.012)\cell\qc (0.019)\cell\qc (0.049)\cell\qc (0.082)\cell\qc (0.016)\cell\qc (0.009)\cell\qc (0.016)\cell\qc (0.014)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 16,197\cell\qc 6,763\cell\qc 16,197\cell\qc 6,765\cell\qc 16,197\cell\qc 6,750\cell\qc 16,197\cell\qc 6,758\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4464\clbrdrb\brdrs\cellx5904\clbrdrb\brdrs\cellx7056\clbrdrb\brdrs\cellx8496\clbrdrb\brdrs\cellx9648\clbrdrb\brdrs\cellx11088\clbrdrb\brdrs\cellx12240
+\ql R-squared\cell\qc 0.135\cell\qc 0.383\cell\qc 0.412\cell\qc 0.469\cell\qc 0.006\cell\qc 0.006\cell\qc 0.037\cell\qc 0.007\cell\row
+
+\pard\qc\sb79\sa79\fs29 \par
+\trowd\intbl\trautofit1\trgaph144\sb79\sa79\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1512\clbrdrt\brdrs\cellx2688\clbrdrt\brdrs\cellx3864\clbrdrt\brdrs\cellx5040\clbrdrt\brdrs\cellx6216\clbrdrt\brdrs\cellx7392\clbrdrt\brdrs\cellx8568\clbrdrt\brdrs\cellx9744\fs24 \ql \cell \qc Married\cell \qc Married\cell \qc Kids\cell \qc Kids\cell \qc  K <20\cell \qc K <20\cell \qc M <20\cell \qc M <20\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1512\clbrdrt\brdrs\cellx2688\clbrdrt\brdrs\cellx3864\clbrdrt\brdrs\cellx5040\clbrdrt\brdrs\cellx6216\clbrdrt\brdrs\cellx7392\clbrdrt\brdrs\cellx8568\clbrdrt\brdrs\cellx9744\fs24 \pard\intbl\ql DV\cell \pard\intbl\tqdec\tx538 {\fs24 0.834}\cell \pard\intbl\tqdec\tx538 {\fs24 0.676}\cell \pard\intbl\tqdec\tx538 {\fs24 2.583}\cell \pard\intbl\tqdec\tx538 {\fs24 1.979}\cell \pard\intbl\tqdec\tx538 {\fs24 0.421}\cell \pard\intbl\tqdec\tx538 {\fs24 0.046}\cell \pard\intbl\tqdec\tx538 {\fs24 0.531}\cell \pard\intbl\tqdec\tx538 {\fs24 0.100}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\clbrdrb\brdrs\cellx336\clbrdrb\brdrs\cellx1512\clbrdrb\brdrs\cellx2688\clbrdrb\brdrs\cellx3864\clbrdrb\brdrs\cellx5040\clbrdrb\brdrs\cellx6216\clbrdrb\brdrs\cellx7392\clbrdrb\brdrs\cellx8568\clbrdrb\brdrs\cellx9744\fs24 \pard\intbl\ql \cell \pard\intbl\tqdec\tx538 {\fs20 (0.008)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.012)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.035)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.056)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.011)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.006)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.011)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.009)}\cell\row
+\pard\qc\sb0\sa79\fs19 DV shows mean dependent variable at lower limit. Robust standard errors in parentheses. *** {\i p}<0.01, ** {\i p}<0.05, * {\i p}<0.1\par
+\pard\sb0\sa0\fs24\par
+}

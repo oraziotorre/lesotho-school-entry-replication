@@ -1,0 +1,26 @@
+{\rtf1\fs24
+\pard\qc
+Time in nursery in SACMEQ III - 2007\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx1872\clbrdrt\brdrs\cellx3744\clbrdrt\brdrs\cellx5040\clbrdrt\brdrs\cellx6192
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3744\cellx5040\cellx6192
+\ql \cell\qc Both genders\cell\qc Female\cell\qc Male\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3744\cellx5040\cellx6192
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3744\clbrdrb\brdrs\cellx5040\clbrdrb\brdrs\cellx6192
+\ql VARIABLES\cell\qc Nursery\cell\qc Nursery\cell\qc Nursery\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3744\cellx5040\cellx6192
+\ql \cell\qc \cell\qc \cell\qc \cell\row
+\ql birthmo_jul\cell\qc 0.236***\cell\qc 0.276***\cell\qc 0.190*\cell\row
+\ql \cell\qc (0.068)\cell\qc (0.091)\cell\qc (0.104)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 4,240\cell\qc 2,398\cell\qc 1,842\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3744\clbrdrb\brdrs\cellx5040\clbrdrb\brdrs\cellx6192
+\ql R-squared\cell\qc 0.025\cell\qc 0.027\cell\qc 0.028\cell\row
+
+\pard\qc\sb79\sa79\fs29 \par
+\trowd\intbl\trautofit1\trgaph144\sb79\sa79\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx2352\clbrdrt\brdrs\cellx3528\clbrdrt\brdrs\cellx4704\fs24 \ql \cell \qc Both genders\cell \qc Female\cell \qc Male\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx2352\clbrdrt\brdrs\cellx3528\clbrdrt\brdrs\cellx4704\fs24 \pard\intbl\ql DV\cell \pard\intbl\tqdec\tx880 {\fs24 0.945}\cell \pard\intbl\tqdec\tx538 {\fs24 0.894}\cell \pard\intbl\tqdec\tx538 {\fs24 1.007}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\clbrdrb\brdrs\cellx336\clbrdrb\brdrs\cellx2352\clbrdrb\brdrs\cellx3528\clbrdrb\brdrs\cellx4704\fs24 \pard\intbl\ql \cell \pard\intbl\tqdec\tx880 {\fs20 (0.045)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.059)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.068)}\cell\row
+\pard\qc\sb0\sa79\fs19 DV shows mean dependent variable at lower limit. Robust standard errors in parentheses. *** {\i p}<0.01, ** {\i p}<0.05, * {\i p}<0.1\par
+\pard\sb0\sa0\fs24\par
+}

@@ -1,0 +1,26 @@
+{\rtf1\fs24
+\pard\qc
+Marriage among adults\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx1872\clbrdrt\brdrs\cellx3312\clbrdrt\brdrs\cellx4752\clbrdrt\brdrs\cellx6192\clbrdrt\brdrs\cellx7488\clbrdrt\brdrs\cellx9072\clbrdrt\brdrs\cellx10512
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\qc (6)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4752\cellx6192\cellx7488\cellx9072\cellx10512
+\ql \cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\qc DHS\cell\qc Census\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4752\cellx6192\cellx7488\cellx9072\cellx10512
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4752\clbrdrb\brdrs\cellx6192\clbrdrb\brdrs\cellx7488\clbrdrb\brdrs\cellx9072\clbrdrb\brdrs\cellx10512
+\ql VARIABLES\cell\qc Married\cell\qc < Age 20\cell\qc < Age 18\cell\qc < Age 15\cell\qc Spouse edu\cell\qc Married\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4752\cellx6192\cellx7488\cellx9072\cellx10512
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql birthmo_jul\cell\qc -0.029***\cell\qc -0.036***\cell\qc -0.033***\cell\qc -0.004\cell\qc 0.388**\cell\qc -0.027***\cell\row
+\ql \cell\qc (0.011)\cell\qc (0.013)\cell\qc (0.011)\cell\qc (0.005)\cell\qc (0.152)\cell\qc (0.008)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 22,020\cell\qc 22,020\cell\qc 22,020\cell\qc 22,020\cell\qc 11,753\cell\qc 53,622\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4752\clbrdrb\brdrs\cellx6192\clbrdrb\brdrs\cellx7488\clbrdrb\brdrs\cellx9072\clbrdrb\brdrs\cellx10512
+\ql R-squared\cell\qc 0.183\cell\qc 0.029\cell\qc 0.025\cell\qc 0.010\cell\qc 0.079\cell\qc 0.276\cell\row
+
+\pard\qc\sb79\sa79\fs29 \par
+\trowd\intbl\trautofit1\trgaph144\sb79\sa79\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1512\clbrdrt\brdrs\cellx2856\clbrdrt\brdrs\cellx4200\clbrdrt\brdrs\cellx5544\clbrdrt\brdrs\cellx7224\clbrdrt\brdrs\cellx8400\fs24 \ql \cell \qc Married\cell \qc < Age 20\cell \qc < Age 18\cell \qc < Age 15\cell \qc Spouse edu\cell \qc Married\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1512\clbrdrt\brdrs\cellx2856\clbrdrt\brdrs\cellx4200\clbrdrt\brdrs\cellx5544\clbrdrt\brdrs\cellx7224\clbrdrt\brdrs\cellx8400\fs24 \pard\intbl\ql DV\cell \pard\intbl\tqdec\tx538 {\fs24 0.777}\cell \pard\intbl\tqdec\tx606 {\fs24 0.418}\cell \pard\intbl\tqdec\tx606 {\fs24 0.231}\cell \pard\intbl\tqdec\tx606 {\fs24 0.033}\cell \pard\intbl\tqdec\tx743 {\fs24 5.506}\cell \pard\intbl\tqdec\tx538 {\fs24 0.694}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\clbrdrb\brdrs\cellx336\clbrdrb\brdrs\cellx1512\clbrdrb\brdrs\cellx2856\clbrdrb\brdrs\cellx4200\clbrdrb\brdrs\cellx5544\clbrdrb\brdrs\cellx7224\clbrdrb\brdrs\cellx8400\fs24 \pard\intbl\ql \cell \pard\intbl\tqdec\tx538 {\fs20 (0.007)}\cell \pard\intbl\tqdec\tx606 {\fs20 (0.009)}\cell \pard\intbl\tqdec\tx606 {\fs20 (0.008)}\cell \pard\intbl\tqdec\tx606 {\fs20 (0.003)}\cell \pard\intbl\tqdec\tx743 {\fs20 (0.102)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.006)}\cell\row
+\pard\qc\sb0\sa79\fs19 DV shows mean dependent variable at lower limit. Robust standard errors in parentheses. *** {\i p}<0.01, ** {\i p}<0.05, * {\i p}<0.1\par
+\pard\sb0\sa0\fs24\par
+}

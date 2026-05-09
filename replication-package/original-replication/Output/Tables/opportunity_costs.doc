@@ -1,0 +1,26 @@
+{\rtf1\fs24
+\pard\qc
+Opportunity costs among children aged 10-14 years\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx1872\clbrdrt\brdrs\cellx3024\clbrdrt\brdrs\cellx4320\clbrdrt\brdrs\cellx5616\clbrdrt\brdrs\cellx6912\clbrdrt\brdrs\cellx8064\clbrdrt\brdrs\cellx9216\clbrdrt\brdrs\cellx10368\clbrdrt\brdrs\cellx11520
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\qc (6)\cell\qc (7)\cell\qc (8)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3024\cellx4320\cellx5616\cellx6912\cellx8064\cellx9216\cellx10368\cellx11520
+\ql \cell\qc Female\cell\qc Male\cell\qc Female\cell\qc Male\cell\qc Female\cell\qc Male\cell\qc Female\cell\qc Male\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3024\cellx4320\cellx5616\cellx6912\cellx8064\cellx9216\cellx10368\cellx11520
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3024\clbrdrb\brdrs\cellx4320\clbrdrb\brdrs\cellx5616\clbrdrb\brdrs\cellx6912\clbrdrb\brdrs\cellx8064\clbrdrb\brdrs\cellx9216\clbrdrb\brdrs\cellx10368\clbrdrb\brdrs\cellx11520
+\ql VARIABLES\cell\qc Herding\cell\qc Herding\cell\qc Domestic\cell\qc Domestic\cell\qc Econ\cell\qc Econ\cell\qc Hazard\cell\qc Hazard\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3024\cellx4320\cellx5616\cellx6912\cellx8064\cellx9216\cellx10368\cellx11520
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql birthmo_jul\cell\qc 0.020\cell\qc -5.306**\cell\qc -2.083\cell\qc 0.783\cell\qc -0.191\cell\qc -1.412\cell\qc 0.022\cell\qc -0.059\cell\row
+\ql \cell\qc (0.201)\cell\qc (2.369)\cell\qc (2.010)\cell\qc (1.908)\cell\qc (0.720)\cell\qc (1.419)\cell\qc (0.034)\cell\qc (0.053)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 940\cell\qc 970\cell\qc 940\cell\qc 970\cell\qc 940\cell\qc 970\cell\qc 940\cell\qc 970\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3024\clbrdrb\brdrs\cellx4320\clbrdrb\brdrs\cellx5616\clbrdrb\brdrs\cellx6912\clbrdrb\brdrs\cellx8064\clbrdrb\brdrs\cellx9216\clbrdrb\brdrs\cellx10368\clbrdrb\brdrs\cellx11520
+\ql R-squared\cell\qc 0.004\cell\qc 0.013\cell\qc 0.027\cell\qc 0.006\cell\qc 0.002\cell\qc 0.025\cell\qc 0.008\cell\qc 0.021\cell\row
+
+\pard\qc\sb79\sa79\fs29 \par
+\trowd\intbl\trautofit1\trgaph144\sb79\sa79\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1512\clbrdrt\brdrs\cellx2688\clbrdrt\brdrs\cellx4032\clbrdrt\brdrs\cellx5376\clbrdrt\brdrs\cellx6552\clbrdrt\brdrs\cellx7728\clbrdrt\brdrs\cellx8904\clbrdrt\brdrs\cellx10080\fs24 \ql \cell \qc Herding\cell \qc Herding\cell \qc Domestic\cell \qc Domestic\cell \qc Econ\cell \qc Econ\cell \qc Hazard\cell \qc Hazard\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx1512\clbrdrt\brdrs\cellx2688\clbrdrt\brdrs\cellx4032\clbrdrt\brdrs\cellx5376\clbrdrt\brdrs\cellx6552\clbrdrt\brdrs\cellx7728\clbrdrt\brdrs\cellx8904\clbrdrt\brdrs\cellx10080\fs24 \pard\intbl\ql DV\cell \pard\intbl\tqdec\tx538 {\fs24 0.173}\cell \pard\intbl\tqdec\tx538 {\fs24 16.972}\cell \pard\intbl\tqdec\tx606 {\fs24 13.724}\cell \pard\intbl\tqdec\tx606 {\fs24 7.527}\cell \pard\intbl\tqdec\tx538 {\fs24 1.371}\cell \pard\intbl\tqdec\tx538 {\fs24 5.572}\cell \pard\intbl\tqdec\tx538 {\fs24 0.054}\cell \pard\intbl\tqdec\tx538 {\fs24 0.258}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\clbrdrb\brdrs\cellx336\clbrdrb\brdrs\cellx1512\clbrdrb\brdrs\cellx2688\clbrdrb\brdrs\cellx4032\clbrdrb\brdrs\cellx5376\clbrdrb\brdrs\cellx6552\clbrdrb\brdrs\cellx7728\clbrdrb\brdrs\cellx8904\clbrdrb\brdrs\cellx10080\fs24 \pard\intbl\ql \cell \pard\intbl\tqdec\tx538 {\fs20 (0.171)}\cell \pard\intbl\tqdec\tx538 {\fs20 (1.759)}\cell \pard\intbl\tqdec\tx606 {\fs20 (1.441)}\cell \pard\intbl\tqdec\tx606 {\fs20 (1.294)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.596)}\cell \pard\intbl\tqdec\tx538 {\fs20 (1.033)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.024)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.038)}\cell\row
+\pard\qc\sb0\sa79\fs19 DV shows mean dependent variable at lower limit. Robust standard errors in parentheses. *** {\i p}<0.01, ** {\i p}<0.05, * {\i p}<0.1\par
+\pard\sb0\sa0\fs24\par
+}

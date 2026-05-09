@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:/Users/orazi/Dropbox/AEJ/Logfiles/260509_masterscript.log
+  log type:  text
+ opened on:   9 May 2026, 16:52:13
+
+. 
+. 
+. ******************************************************************************
+> ********
+. * PART I: DATA
+. ******************************************************************************
+> ********
+.         
+. do "$dofiles/AEJ_Datasets_3 Jun 2025.do"
+
+. ******************************************************************************
+> ********
+. ******************************************************************************
+> ********
+. * This do-file contains replication coding for the following article:
+. * Age at School Entry and Human Capital Development: Evidence from Lesotho
+. * Authors: De Neve, Moshoeshoe, Bor (2025)
+. * Stata version 17.0 was used for all analyses.
+. * Description: Data management/tidying 
+. ******************************************************************************
+> ********
+. ******************************************************************************
+> ********
+. 
+. ******************************************************************************
+> ********
+. * SET UP
+. ******************************************************************************
+> ********
+. 
+.         *Version control
+.         version 17.0
+
+.         
+.         *Clear
+.         clear all
+
+.         set more off
+
+.         set maxvar 32767, permanently // to accomodate SE version
+(set maxvar preference recorded)
+
+
+.         cap log close _all

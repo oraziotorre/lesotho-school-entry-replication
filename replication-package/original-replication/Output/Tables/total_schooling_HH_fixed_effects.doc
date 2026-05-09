@@ -1,0 +1,23 @@
+{\rtf1\fs24
+\pard\qc
+Total years of schooling adding household fixed effects\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx3888\clbrdrt\brdrs\cellx5040\clbrdrt\brdrs\cellx6192\clbrdrt\brdrs\cellx7344\clbrdrt\brdrs\cellx8640
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3888\cellx5040\cellx6192\cellx7344\cellx8640
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx3888\clbrdrb\brdrs\cellx5040\clbrdrb\brdrs\cellx6192\clbrdrb\brdrs\cellx7344\clbrdrb\brdrs\cellx8640
+\ql VARIABLES\cell\qc MICS\cell\qc MICS\cell\qc DHS\cell\qc Census\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3888\cellx5040\cellx6192\cellx7344\cellx8640
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql birthmo_jul\cell\qc 0.269**\cell\qc 0.223\cell\qc 0.291**\cell\qc 0.187***\cell\row
+\ql \cell\qc (0.124)\cell\qc (0.163)\cell\qc (0.128)\cell\qc (0.072)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 10,073\cell\qc 10,073\cell\qc 12,715\cell\qc 67,009\cell\row
+\ql R-squared\cell\qc 0.351\cell\qc 0.121\cell\qc 0.110\cell\qc 0.062\cell\row
+\ql Number of householdID\cell\qc \cell\qc 5,909\cell\qc \cell\qc \cell\row
+\ql Number of serial\cell\qc \cell\qc \cell\qc \cell\qc 33,704\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx3888\clbrdrb\brdrs\cellx5040\clbrdrb\brdrs\cellx6192\clbrdrb\brdrs\cellx7344\clbrdrb\brdrs\cellx8640
+\ql Number of householdID_year\cell\qc \cell\qc \cell\qc 5,555\cell\qc \cell\row
+\pard\qc
+Robust standard errors in parentheses\par
+*** p<0.01, ** p<0.05, * p<0.1\par
+}

@@ -1,0 +1,26 @@
+{\rtf1\fs24
+\pard\qc
+Balance in background characteristics among children\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx1872\clbrdrt\brdrs\cellx3024\clbrdrt\brdrs\cellx4752\clbrdrt\brdrs\cellx5904\clbrdrt\brdrs\cellx7344\clbrdrt\brdrs\cellx8496\clbrdrt\brdrs\cellx9648
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\qc (6)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3024\cellx4752\cellx5904\cellx7344\cellx8496\cellx9648
+\ql \cell\qc m1\cell\qc m2\cell\qc m3\cell\qc m4\cell\qc m5\cell\qc m6\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3024\cellx4752\cellx5904\cellx7344\cellx8496\cellx9648
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3024\clbrdrb\brdrs\cellx4752\clbrdrb\brdrs\cellx5904\clbrdrb\brdrs\cellx7344\clbrdrb\brdrs\cellx8496\clbrdrb\brdrs\cellx9648
+\ql VARIABLES\cell\qc bord1\cell\qc birthweight\cell\qc stunt\cell\qc underwght\cell\qc anemia\cell\qc cough\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3024\cellx4752\cellx5904\cellx7344\cellx8496\cellx9648
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql birthmo_jul\cell\qc 0.020\cell\qc -0.015\cell\qc -0.024\cell\qc 0.011\cell\qc -0.003\cell\qc 0.001\cell\row
+\ql \cell\qc (0.040)\cell\qc (0.051)\cell\qc (0.039)\cell\qc (0.026)\cell\qc (0.041)\cell\qc (0.038)\cell\row
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 2,583\cell\qc 2,583\cell\qc 2,583\cell\qc 2,583\cell\qc 2,583\cell\qc 2,583\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3024\clbrdrb\brdrs\cellx4752\clbrdrb\brdrs\cellx5904\clbrdrb\brdrs\cellx7344\clbrdrb\brdrs\cellx8496\clbrdrb\brdrs\cellx9648
+\ql R-squared\cell\qc 0.004\cell\qc 0.010\cell\qc 0.036\cell\qc 0.020\cell\qc 0.035\cell\qc 0.020\cell\row
+
+\pard\qc\sb79\sa79\fs29 \par
+\trowd\intbl\trautofit1\trgaph144\sb79\sa79\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx2352\clbrdrt\brdrs\cellx4368\clbrdrt\brdrs\cellx5880\clbrdrt\brdrs\cellx7896\clbrdrt\brdrs\cellx9072\clbrdrt\brdrs\cellx10248\fs24 \ql \cell \qc Birth order \cell \qc Birthweight \cell \qc Stunting \cell \qc Underweight \cell \qc Anemia \cell \qc Cough \cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\clbrdrt\brdrs\cellx336\clbrdrt\brdrs\cellx2352\clbrdrt\brdrs\cellx4368\clbrdrt\brdrs\cellx5880\clbrdrt\brdrs\cellx7896\clbrdrt\brdrs\cellx9072\clbrdrt\brdrs\cellx10248\fs24 \pard\intbl\ql DV\cell \pard\intbl\tqdec\tx880 {\fs24 0.381}\cell \pard\intbl\tqdec\tx880 {\fs24 3.132}\cell \pard\intbl\tqdec\tx674 {\fs24 0.353}\cell \pard\intbl\tqdec\tx880 {\fs24 0.100}\cell \pard\intbl\tqdec\tx538 {\fs24 0.533}\cell \pard\intbl\tqdec\tx538 {\fs24 0.346}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\clbrdrb\brdrs\cellx336\clbrdrb\brdrs\cellx2352\clbrdrb\brdrs\cellx4368\clbrdrb\brdrs\cellx5880\clbrdrb\brdrs\cellx7896\clbrdrb\brdrs\cellx9072\clbrdrb\brdrs\cellx10248\fs24 \pard\intbl\ql \cell \pard\intbl\tqdec\tx880 {\fs20 (0.029)}\cell \pard\intbl\tqdec\tx880 {\fs20 (0.038)}\cell \pard\intbl\tqdec\tx674 {\fs20 (0.028)}\cell \pard\intbl\tqdec\tx880 {\fs20 (0.019)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.029)}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.028)}\cell\row
+\pard\qc\sb0\sa79\fs19 DV shows mean dependent variable at lower limit. Robust standard errors in parentheses. *** {\i p}<0.01, ** {\i p}<0.05, * {\i p}<0.1\par
+\pard\sb0\sa0\fs24\par
+}
