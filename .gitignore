@@ -5,6 +5,10 @@
 # If you want to make the parsing overall case-insensitive, you can use the following:
 #  git config core.ignorecase false
 # Version: 2025-06-06
+replication-package/original-replication/Raw_data/IPUMS/South_Africa/census_south afr_all.dta
+replication-package/original-replication/Raw_data/IPUMS/South_Africa/sa_census.dta
+replication-package/original-replication/Raw_data/IPUMS/Lesotho/census lesotho.dta
+replication-package/original-replication/Raw_data/SACMEQ/2007/SACMEQ III - 15_final.dta
 *.xls
 *.xlsx
 *.gpkg
@@ -21,7 +25,6 @@
 *.SAV
 *.sas7bdat
 *.SAS7BDAT
-*.dta
 *.DTA
 *.csv
 *.CSV
