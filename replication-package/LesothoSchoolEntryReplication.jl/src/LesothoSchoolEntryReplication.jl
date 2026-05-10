@@ -1,6 +1,5 @@
 module LesothoSchoolEntryReplication
 
-
 export run_all
 
 include("figures.jl")

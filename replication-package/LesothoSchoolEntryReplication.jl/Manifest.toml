@@ -2,7 +2,7 @@
 
 julia_version = "1.12.6"
 manifest_format = "2.0"
-project_hash = "a8bd69a7efc22ac9a923688a88500270cec3150c"
+project_hash = "90e896201872a0a71c10e3ce8bd38b0c850d52ff"
 
 [[deps.AliasTables]]
 deps = ["PtrArrays", "Random"]
@@ -155,6 +155,12 @@ version = "0.19.4"
 git-tree-sha1 = "bfc1187b79289637fa0ef6d4436ebdfe6905cbd6"
 uuid = "e2d170a0-9d28-54be-80f0-106bbe20a464"
 version = "1.0.0"
+
+[[deps.DataValues]]
+deps = ["DataValueInterfaces", "Dates"]
+git-tree-sha1 = "d88a19299eba280a6d062e135a43f00323ae70bf"
+uuid = "e7dc6d0d-1eca-5fa6-8ad6-5aecde8b7ea5"
+version = "0.4.13"
 
 [[deps.Dates]]
 deps = ["Printf"]
@@ -483,7 +489,7 @@ version = "0.16.10"
     tectonic_jll = "d7dd28d6-a5e6-559c-9131-7eb760cdacc5"
 
 [[deps.LesothoSchoolEntryReplication]]
-deps = ["CSV", "DataFrames", "GLM", "Plots", "ReadStatTables", "RegressionTables", "Statistics", "StatsModels", "Test", "TestItemRunner"]
+deps = ["CSV", "DataFrames", "GLM", "Plots", "ReadStat", "ReadStatTables", "RegressionTables", "Statistics", "StatsModels", "Test", "TestItemRunner"]
 path = "."
 uuid = "8dcd9ca2-af9a-41cd-94e1-e96990e23cf1"
 version = "0.1.0"
@@ -849,6 +855,12 @@ version = "1.11.0"
 deps = ["SHA"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 version = "1.11.0"
+
+[[deps.ReadStat]]
+deps = ["DataValues", "Dates", "ReadStat_jll"]
+git-tree-sha1 = "f8652515b68572d3362ee38e32245249413fb2d7"
+uuid = "d71aba96-b539-5138-91ee-935c3ee1374c"
+version = "1.1.1"
 
 [[deps.ReadStatTables]]
 deps = ["CEnum", "DataAPI", "Dates", "InlineStrings", "MappedArrays", "Missings", "PooledArrays", "PrecompileTools", "PrettyTables", "ReadStat_jll", "SentinelArrays", "StructArrays", "Tables"]
