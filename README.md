@@ -17,9 +17,36 @@ The goal of this project is to reproduce the main empirical results, figures, an
 ## Project Structure
 
 ```
-.
-├── output/             # Replicated figures and tables
-├── report/             # Replication report (Quarto)
+lesotho-school-entry-replication/
+│
+├── images/
+│
+├── replication-package/
+│   ├── LesothoSchoolEntryReplication.jl/
+│   │   ├── Project.toml
+│   │   ├── Manifest.toml
+│   │   │
+│   │   ├── src/
+│   │   │   ├── LesothoSchoolEntryReplication.jl
+│   │   │   ├── run_all.jl
+│   │   │   ├── figures.jl
+│   │   │   ├── tables.jl
+│   │   │   └── utils.jl
+│   │   │
+│   │   ├── test/
+│   │   │   └── runtests.jl
+│   │   │
+│   │   └── output/
+│   │       ├── figures/
+│   │       └── tables/
+│   │
+│   └── original-replication/
+│
+├── report_files/
+├── report.qmd
+├── report.html
+│
+├── .gitignore
 └── README.md
 ```
 
@@ -27,20 +54,47 @@ The goal of this project is to reproduce the main empirical results, figures, an
 
 ## Installation
 
-1. Install Julia (recommended version: 1.x)
+1. Install Julia (recommended version: **1.12.6**) from https://julialang.org/downloads/ and verify:
 
-2. Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd <your-repo-name>
+julia --version
 ```
 
-3. Install dependencies:
+2. Clone the repository and run Julia:
+```bash
+git clone https://github.com/oraziotorre/lesotho-school-entry-replication.git
+cd lesotho-school-entry-replication
+julia
+```
+
+## Running the Replication:
+
+1. Activate the environment:
 ```julia
 using Pkg
-Pkg.activate(".")
+Pkg.activate("./replication-package/LesothoSchoolEntryReplication.jl")
+```
+
+2. Install the dependencies:
+```julia
 Pkg.instantiate()
 ```
+
+3. Run the full replication:
+```julia
+using LesothoSchoolEntryReplication
+run_all()
+```
+
+All replicated results are saved in:
+
+```
+replication-package/LesothoSchoolEntryReplication.jl/output/
+```
+
+Ensure that all required datasets are correctly placed in the `replication-package/original-replication/Raw_data/` folder.
+If the data are missing or incomplete, you must first run the original replication using the Stata master script located at:
+`replication-package/original-replication/Dofiles/_masterscript.do`
 
 ---
 
@@ -50,41 +104,9 @@ To run the unit tests:
 
 ```julia
 using Pkg
-Pkg.activate(".")
+Pkg.activate("./replication-package/LesothoSchoolEntryReplication.jl")
 Pkg.test()
 ```
-
----
-
-## Running the Replication
-
-To run the full replication pipeline:
-
-```julia
-include("run_all.jl")
-run_all()
-```
-
-This script performs the following steps:
-- loads and cleans the data
-- implements the regression discontinuity design (RDD)
-- reproduces the main empirical results
-- generates figures and tables
-- saves outputs in the `output/` folder
-
----
-
-## Output
-
-All replicated results are saved in:
-
-```
-output/
-```
-
-This includes:
-- Figures (RDD plots, main results)
-- Tables (regression outputs)
 
 ---
 
@@ -104,35 +126,8 @@ report/
 quarto render
 ```
 
-### Report output
-
 The compiled report will be available as:
-- `.html` or `.pdf` in the `report/` folder
-
----
-
-## Methodology
-
-The replication focuses on reproducing the main identification strategy of the paper:
-
-- Regression Discontinuity Design (RDD)
-- Cutoff: June 30 school entry rule
-- Treatment: being born after the cutoff (starting school later)
-
-Key outcomes include:
-- Years of schooling
-- Literacy and skills
-- Labor market outcomes
-- Fertility and marriage
-- Health outcomes
-
----
-
-## Notes
-
-- Ensure all required datasets are correctly placed in the `data/` folder
-- The entire pipeline can be executed using `run_all()`
-- Results may differ slightly due to data access, cleaning choices, or software differences
+- `.html` or `.pdf` in the main folder
 
 ---
 
