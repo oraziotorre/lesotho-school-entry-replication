@@ -1,46 +1,26 @@
 function run_all()
-
-    #################################################
-    # PATHS
-    #################################################
-
-    REPLICATION_ROOT = normpath(
-        joinpath(@__DIR__, "..", "..")
-    )
-
-    ORIGINAL = joinpath(
-        REPLICATION_ROOT,
-        "original-replication"
-    )
+    
+    # Useful Paths
+    REPLICATION_ROOT = normpath(joinpath(@__DIR__, "..", ".."))
+    ORIGINAL = joinpath(REPLICATION_ROOT, "original-replication")
 
     RAW_DATA = joinpath(ORIGINAL, "Raw_data")
-
     MICS_DATA = joinpath(RAW_DATA, "MICS")
 
     OUTPUT = joinpath(@__DIR__, "..", "output")
-
+    TABLES = joinpath(OUTPUT, "tables")
     FIGURES = joinpath(OUTPUT, "figures")
-
+    mkpath(TABLES)
     mkpath(FIGURES)
+    
 
-    #################################################
-    # LOAD CODE
-    #################################################
-
+    # Loading
+    include(joinpath(@__DIR__, "..", "src", "tables.jl"))
     include(joinpath(@__DIR__, "..", "src", "figures.jl"))
 
-    #################################################
-    # RUN
-    #################################################
 
-    println("===================================")
-    println("RUNNING FIGURE REPLICATION")
-    println("===================================")
-
-    run_figure1(MICS_DATA, FIGURES)
-
-    println("===================================")
-    println("DONE")
-    println("===================================")
+    # Running
+    run_all_figures(MICS_DATA, FIGURES)
+    run_all_tables(MICS_DATA, TABLES)
 
 end
