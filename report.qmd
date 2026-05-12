@@ -1,6 +1,6 @@
 ---
 title: "CCA `CompEcon` Replication Project"
-subtitle: "Replication of xxxx by i, j and k (AER, 2024)"
+subtitle: "Replication of Age at School Entry and Human Capital Development: Evidence from Lesotho by Jan-Walter De Neve, Ramaele Moshoeshoe and Jacob Bor (AEj, 2026)"
 author: 
   - name: Orazio Torre
     affiliations: Politecnico di Torino; Collegio Carlo Alberto
