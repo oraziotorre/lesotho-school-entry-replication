@@ -125,7 +125,7 @@ The original Figure 1 has two panels. Panel A shows the probability of currently
 
 Our replication reproduces both panels using the MICS 2018 household data (`mics6hl.dta`). We compute group means with 95% confidence intervals and overlay a vertical dashed line at the June/July threshold. The main pattern — the sharp jump in enrollment probability between June- and July-born children of roughly 40 percentage points in Panel A, and the half-year gap in average age at entry in Panel B — is successfully reproduced. 
 
-::: {#fig-one layout-ncol=2}
+
 
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures
 /MOB_and_SchoolEntry.png)
@@ -134,7 +134,7 @@ Our replication reproduces both panels using the MICS 2018 household data (`mics
 Figure 3 is a placebo test for the identifying assumption of the RDD: if being born just after June 30 (rather than just before) only affects later outcomes through delayed school entry, then there should be no discontinuity in pre-determined characteristics. The figure shows the probability that a mother attained secondary education by the month of birth of her first child. Under the null of no manipulation or selection, this relationship should be smooth across the June/July threshold.
 
 Our replication uses the MICS birth history data (`micsbh.dta`), restricting to first-born children of eligible mothers. We find no evidence of a discontinuity at the threshold, consistent with the paper's original finding. The scatter of means and confidence intervals around a flat level of roughly 0.55–0.60 is well reproduced.
-::: {#fig-one layout-ncol=2}
+
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures
 /placebo_maternaleducation.png)
 
@@ -143,7 +143,6 @@ Our replication uses the MICS birth history data (`micsbh.dta`), restricting to 
 Figure 5 is one of the central results of the paper. It shows that children born July–December (who enter primary school at an older age) have fewer years of schooling than January–June-born children at ages 3–11, but that this disadvantage reverses starting around age 12–15, so that by late adolescence July–December-born children have more total years of schooling. This "reversal of fortunes" is the main dynamic result of the paper.
 
 We estimate simple OLS regressions of years of education (`educ`) on the treatment indicator (`birthmo_jul`) separately for each age group, using MICS 2018 household data. We plot the coefficient estimates and 95% confidence intervals. Our replicated figure successfully captures the reversal: a negative coefficient in early childhood, crossing zero in early adolescence, and turning positive and growing by late adolescence. 
-::: {#fig-one layout-ncol=2}
 
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures
 /Reversal_of_fortunes.png)
@@ -154,7 +153,6 @@ Figure 18 shows how foundational learning skills and home reading habits evolve 
 
 Our replication uses the MICS 2018 foundational skills data (`mics6fs.dta`), computing weighted means by age group (7–8, 9–10, 11–12, 13–14) and birth month group (Jan–Jun vs Jul–Dec), using survey weights. The bar chart format, color scheme, and age groupings match the paper. The main patterns are replicated: the initial advantage of early entrants in all four outcomes at ages 7–8, and the narrowing or reversal of this gap at older age groups. A limitation is that the paper uses `rdplot`-based estimates for each age bin while our version shows raw weighted means.
 
-::: {#fig-eighteen layout-ncol=2}
 
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures
 /skills_kids.png)
