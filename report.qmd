@@ -27,43 +27,64 @@ This report was created as part of the assessment for the [`Computational Econom
 
 This report attempts a replication of 
 
-* paper: DOI of published paper
-* replication package: DOI of package
+* paper: 10.1257/app.20230709
+* replication package: 10.3886/E217581V1
 
 by using the `julia` computation language.
 
 We have been able to replicate the following exhibits:
 
-1. figure one
-2. figure two
-3. table three
+1. Figure 1 : Month of birth and entry into primary school
+2. Figure 3 : Continuity in pre-treatment characteristics: maternal education
+3. Figure 5 : Reversal of early disadvantage for cohorts born July–December
+4. Figure 18 : Foundational reading, numeracy skills, and home reading habits by age and month of birth
 
-> {REPLICATOR}: leave comments here for partial results, caveats, and other observations
-
+> **Partial results and caveats:** The original paper uses Stata for all estimation and figure production. We replicated the analysis in Julia using the `FixedEffectModels.jl`, `GLM.jl` and `Plots.jl` files. The four figures are successfully replicated, some minor visual differences arise from differences between Julia's `Plots.jl` and Stata's `rdplot` command.
 
 ## High Level Description of Computational Problem in Paper
 
 > {REPLICATOR}: please write here a concise summary describing the main computational tasks in this paper, i.e. which equations to solve, which to estimate, which methodology, any implementation details visible from the replication package (algorithms, packages, procedures used)
->
-> You can use standard $\LaTeX$ expression, $x+y$, also display mode of course 
-> $$\begin{align}
-> x +y & = z\\
-> z &= 0
-> \end{align}$$
+The paper evaluates the impact of age at school entry on human capital development in Lesotho using a **regression discontinuity design (RDD)**. The key identifying variation is Lesotho's enrollment age threshold: children born on or before June 30 must enroll in grade 1 in January of the same year (at age ~5.3 years), while children born July 1 or later may defer enrollment by one year (entering at age ~5.8 years). This creates a local natural experiment in the age at which children begin primary school.
+The base specification is a standard linear RDD estimated separately for the six-month windows on either side of the cutoff:
 
+$$
+E[Y_i \mid \text{MOB}_i] = \beta_0 + \beta_1(\text{MOB}_i) + \beta_2 \times \mathbf{1}[\text{MOB}_i \geq \text{July}] + \beta_3(\text{MOB}_i) \times \mathbf{1}[\text{MOB}_i \geq \text{July}]
+$$
+where $Y_i$ is the outcome of interest, $\text{MOB}_i$ is month of birth centered as $\text{MOB}_i - 6.5$, and $\beta_2$ captures the reduced-form (intention-to-treat) discontinuity at the threshold.
+
+The paper estimates this specification across multiple outcomes and datasets:
+
+- **Short-run outcomes** (MICS 2018 child questionnaire): school enrollment and age at entry, foundational literacy and numeracy test scores, time use (herding, domestic activities, economic activities, hazardous labor)
+- **Medium-run outcomes** (MICS 2018 household questionnaire, Lesotho Census 2006): years of schooling completed, grade progression, school dropout
+- **Long-run outcomes** (Lesotho DHS 2004–05, 2009–10, 2014): labor market outcomes, household wealth, fertility, marriage, HIV biomarkers
+- **Intergenerational outcomes** (DHS birth histories, MICS birth histories): child survival and mortality
+
+
+The computational work in the paper involves the following main tasks:
+
+1. **Data cleaning and merging** across multiple survey datasets (MICS, DHS, SACMEQ, Census) stored as Stata `.dta` files
+2. **OLS and fixed-effects regression** of equation (1) for each outcome, using month of birth as the running variable and school-age indicators as fixed effects
+3. **Binned scatter plots** with overlaid quadratic RD fit (using Stata's `rdplot` command from `rdrobust`)
+4. **Heterogeneity analyses** by gender, household livestock ownership, age cohort
+5. **Placebo and robustness checks**: McCrary density test, balance tests on pre-treatment covariates, alternative bandwidths, donut RDD, household fixed effects
+
+The original replication package uses Stata/MP with the `rdrobust`, `reghdfe`, and `ivregress` packages. Our Julia reimplementation uses:
+
+- `ReadStatTables.jl` — reading `.dta` Stata files
+- `DataFrames.jl` — data manipulation
+- `FixedEffectModels.jl` — fixed-effects OLS regression (equivalent to Stata's `reghdfe`)
+- `GLM.jl` — standard OLS for marginal predictions
+- `Plots.jl` — figure production
+- `Statistics.jl` — summary statistics
 
 ## Computational Requirements
 
 Here are the original package's computational requirements:
 
-- [ ] No requirements specified
-- [ ] Software Requirements specified as follows:
-  - Software 1, version ...
-  - Software 2, version ...
-- [ ] Computational Requirements specified as follows:
-  - Cluster size, etc.
-- [ ] Time Requirements specified as follows:
-  - Length of necessary computation (hours, weeks, etc.)
+- Software Requirements specified as follows:
+  - Stata/MP (version used in original package not explicitly specified)
+  - `rdrobust` Stata package 
+  - `reghdfe` Stata package
 
 
 ## Our Computational setup
@@ -77,41 +98,65 @@ Here are the original package's computational requirements:
 > Some options are listed below. Choose the one that applies and delete everything else.
 
 - Mac Laptop M2 MacBook Pro, MacOS 10.14.6, 8 GB of memory, (M2 Processor, 8 cores)
-- RedCloud Servers: Intel Xeon Processor (Skylake) 3.09 GHz (18 processors), Installed Ram 176 GB, 64-bit operating system, x64-based processor
-- CCSS Cloud: Windows Server AMD EPYC 7763 64-Core Processor 2.44 GHz, 128GB
-- BioHPC Linux server, Rocky Linux 9.0, AMD Opteron Processor 6380 / 16 cores/ 125 GB memory (adjust as necessary from output of linux-system-info.sh)
-- WholeTale (describe the environment chosen)
-- CodeOcean (describe the type of capsule chosen) Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz (16 cores), 128 GB Memory
-- Bitbucket Pipelines, "Ubuntu 20.04.2 LTS", Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz, 8 cores, 9GB memory
-- Codespaces, "Ubuntu 20.04.2 LTS", Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz, 2 core, 8GB/ 4-core, 16GB/ 8-core, 32 GB/ 16-core, 64GB (choose appropriately)
-
+- Windows Laptop IdeaPad SLim 5 14IMH9, 
 
 > {REPLICATOR}: Please also list the software you used (specific versions). List only the ones you used, add any not listed in the examples:
 
-- Stata/MP 18.0
-- Matlab R2022a
-- Intel Compiler 3.14152 (note: there is no such thing, so please verify the version!)
+Software used:
+
+- Julia 1.12.6
+- `ReadStatTables.jl` v0.6
+- `DataFrames.jl` v1.7
+- `FixedEffectModels.jl` v1.10
+- `GLM.jl` v1.9
+- `Plots.jl` v1.40
+- `Statistics.jl` (standard library)
+- Quarto 1.9.37 
 
 
 
 # Replication
 
-- Figure 1: Looks the same
-- Figure 2: no program provided
-- Figure 3: Paper version looks different from the one generated by programs:
+We replicated four figures from the paper. 
 
-## Images
+## Figure 1: Month of Birth and Entry into Primary School
 
-you can include images in the `images/` folder, like the examples below. Notice that `.pdf` images don't work well for html output.
- 
-::: {#fig-three layout-ncol=2}
+The original Figure 1 has two panels. Panel A shows the probability of currently attending grade 1 or higher by month and year of birth (for children born 2011–2013 in the MICS 2018 survey). Panel B shows average age at the beginning of the school year among current grade 1 students, by month of birth. Both panels are intended to document the enrollment discontinuity between children born in June versus July.
 
-![Paper version](images/heman.png)
+Our replication reproduces both panels using the MICS 2018 household data (`mics6hl.dta`). We compute group means with 95% confidence intervals and overlay a vertical dashed line at the June/July threshold. The main pattern — the sharp jump in enrollment probability between June- and July-born children of roughly 40 percentage points in Panel A, and the half-year gap in average age at entry in Panel B — is successfully reproduced. 
 
-![Replicated version](images/skeletor.png)
+::: {#fig-one layout-ncol=2}
 
-Figure 3 [DELETE THIS FIGURE]
+![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures
+/MOB_and_SchoolEntry.png)
 
-:::
+## Figure 3: Continuity in Pre-treatment Characteristics — Maternal Education
+Figure 3 is a placebo test for the identifying assumption of the RDD: if being born just after June 30 (rather than just before) only affects later outcomes through delayed school entry, then there should be no discontinuity in pre-determined characteristics. The figure shows the probability that a mother attained secondary education by the month of birth of her first child. Under the null of no manipulation or selection, this relationship should be smooth across the June/July threshold.
+
+Our replication uses the MICS birth history data (`micsbh.dta`), restricting to first-born children of eligible mothers. We find no evidence of a discontinuity at the threshold, consistent with the paper's original finding. The scatter of means and confidence intervals around a flat level of roughly 0.55–0.60 is well reproduced.
+::: {#fig-one layout-ncol=2}
+![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures
+/placebo_maternaleducation.png)
+
+## Figure 5: Reversal of Early Disadvantage for Cohorts Born July–December
+
+Figure 5 is one of the central results of the paper. It shows that children born July–December (who enter primary school at an older age) have fewer years of schooling than January–June-born children at ages 3–11, but that this disadvantage reverses starting around age 12–15, so that by late adolescence July–December-born children have more total years of schooling. This "reversal of fortunes" is the main dynamic result of the paper.
+
+We estimate simple OLS regressions of years of education (`educ`) on the treatment indicator (`birthmo_jul`) separately for each age group, using MICS 2018 household data. We plot the coefficient estimates and 95% confidence intervals. Our replicated figure successfully captures the reversal: a negative coefficient in early childhood, crossing zero in early adolescence, and turning positive and growing by late adolescence. 
+::: {#fig-one layout-ncol=2}
+
+![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures
+/Reversal_of_fortunes.png)
+
+## Figure 18: Foundational Skills and Home Reading by Age and Month of Birth
+
+Figure 18 shows how foundational learning skills and home reading habits evolve with age, separately for children born January–June (earlier school entrants) and July–December (later entrants). The four panels cover: (A) Sesotho reading skills, (B) English reading skills, (C) numeracy skills, and (D) probability of reading books at home. The key result is that early entrants have a skill advantage at younger ages, but this narrows and reverses — particularly for reading — by ages 13–14.
+
+Our replication uses the MICS 2018 foundational skills data (`mics6fs.dta`), computing weighted means by age group (7–8, 9–10, 11–12, 13–14) and birth month group (Jan–Jun vs Jul–Dec), using survey weights. The bar chart format, color scheme, and age groupings match the paper. The main patterns are replicated: the initial advantage of early entrants in all four outcomes at ages 7–8, and the narrowing or reversal of this gap at older age groups. A limitation is that the paper uses `rdplot`-based estimates for each age bin while our version shows raw weighted means.
+
+::: {#fig-eighteen layout-ncol=2}
+
+![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures
+/skills_kids.png)
 
 
