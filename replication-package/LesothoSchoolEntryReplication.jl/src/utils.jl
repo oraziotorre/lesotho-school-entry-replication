@@ -56,3 +56,6 @@ function mean_se(x)
     se = std(vals) / sqrt(n)
     return (y = m, se_y = se)
 end
+
+unlabel(x) = ismissing(x) ? missing : Float64(ReadStatTables.value(x))
+unlabel_int(x) = ismissing(x) ? missing : Int(ReadStatTables.value(x))
