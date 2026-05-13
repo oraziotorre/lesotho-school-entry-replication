@@ -37,11 +37,8 @@ function figure_1A(df)
     )
 
     sort!(gdf, :birthmoyr)
-
     add_ci!(gdf)
-
     gdf.rank = 1:nrow(gdf)
-
     xlabels = String[]
 
     for yr in 2011:2013
@@ -111,7 +108,6 @@ function figure_1B(df)
     )
 
     sort!(gdf, :birthmo)
-
     add_ci!(gdf)
 
     p = scatter_ci_plot(
@@ -187,7 +183,7 @@ function run_figure3(df, FIGURES)
     attained secondary education, based on the month of birth of her first child.
 
     # Arguments
-    - `df`: The input DataFrame containing birth order, maternal education, and birth month.
+    - `df`: The input DataFrame.
     - `FIGURES`: The directory path where the plot will be saved.
     """
 
@@ -210,7 +206,6 @@ function run_figure3(df, FIGURES)
     )
 
     sort!(gdf, :birthmo_child)
-
     add_ci!(gdf)
 
     p = scatter_ci_plot(
@@ -254,7 +249,7 @@ function run_figure5(df, FIGURES)
     beginning of the school year.
 
     # Arguments
-    - `df`: The input DataFrame containing education levels, a treatment indicator for birth semester and school age
+    - `df`: The input DataFrame
     - `FIGURES`: The directory path where the plot will be saved.
     """
 
@@ -327,7 +322,7 @@ function skills_panel(df_fs, outcome_col::Symbol, panel_title::String, ytitle::S
     school entrants (born January–June) and later entrants (born July–December).
 
     # Arguments
-    - `df_fs`: The input DataFrame containing the demographic and skills data.
+    - `df_fs`: The input DataFrame.
     - `outcome_col::Symbol`: The specific variable to plot (e.g. reading skills).
     - `panel_title::String`: The main title for the plot.
     - `ytitle::String`: The label for the y-axis.
@@ -359,11 +354,8 @@ function skills_panel(df_fs, outcome_col::Symbol, panel_title::String, ytitle::S
 
     gdf = grouped_weighted_mean(
         local_df,
-
         groupvars = [:schagecat2_from5, :birthmo_jul],
-
         value = outcome_col,
-
         weight = :fsweight
     )
 
@@ -377,9 +369,7 @@ function skills_panel(df_fs, outcome_col::Symbol, panel_title::String, ytitle::S
     )
 
     agecats = sort(unique(gdf.schagecat2_from5))
-
     n_cats = length(agecats)
-
     bar_width   = 0.35
     group_gap   = 0.3
     group_width = 2 * bar_width + group_gap
@@ -393,20 +383,16 @@ function skills_panel(df_fs, outcome_col::Symbol, panel_title::String, ytitle::S
     jul_dec_vals = Float64[]
 
     for cat in agecats
-
         sub = filter(
             r -> r.schagecat2_from5 == cat,
             gdf
         )
-
         jan = filter(r -> r.birthmo_jul == 0, sub)
         jul = filter(r -> r.birthmo_jul == 1, sub)
-
         push!(
             jan_jun_vals,
             nrow(jan) > 0 ? jan.y[1] : 0.0
         )
-
         push!(
             jul_dec_vals,
             nrow(jul) > 0 ? jul.y[1] : 0.0
@@ -463,9 +449,7 @@ function skills_panel(df_fs, outcome_col::Symbol, panel_title::String, ytitle::S
 
     
     for (i, cat) in enumerate(agecats)
-
         x_left = centers[i] - bar_width / 2
-
         bar_h = jan_jun_vals[i]
 
         plot!(
@@ -496,9 +480,7 @@ function skills_panel(df_fs, outcome_col::Symbol, panel_title::String, ytitle::S
 
     
     for (i, cat) in enumerate(agecats)
-
         x_left = centers[i] + bar_width / 2 + group_gap / 4
-
         bar_h = jul_dec_vals[i]
 
         plot!(
@@ -533,6 +515,16 @@ end
 
 
 function run_figure18(df_fs, FIGURES)
+
+    """
+    Generates four separate subplots using 'skills_panel' and merges them into a
+    single layout, and saves the resulting plot to the specified directory.
+
+    # Arguments
+    - `df_fs`: The input DataFrame.
+    - `FIGURES`: The directory path where the combined plot will be saved.
+    """
+
 
     # Sesotho reading skills
     pA = skills_panel(df_fs, :readsk_s,  "(a) Sesotho reading skills",   "Pr(foundational reading skills Sesotho)")

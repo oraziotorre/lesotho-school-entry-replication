@@ -94,6 +94,18 @@ end
 
 function run_table2(df, tables_output_path)
     
+    """
+    Prepares the dataset and runs fixed-effect regressions to estimate the impact 
+    of birth semester on children's time allocation. It iterates over four time-use 
+    categories across male and female subsamples for children aged 10 to 14. 
+    Finally, it calls `write_table2` to save the formatted table to a text file.
+
+    # Arguments
+    - `df`: The input DataFrame containing demographic and time-use variables.
+    - `tables_output_path`: The directory path where the resulting text file will be written.
+    """
+
+
     for col in names(df)
         df[!, col] = map(x -> ismissing(x) ? missing : unwrap(x), df[!, col])
     end
@@ -107,8 +119,8 @@ function run_table2(df, tables_output_path)
     dropmissing!(df, [:hours_he, :hours_wafi, :hours_otherdomestic, :hours_econ])
 
     df.hours_domestic     = df.hours_wafi .+ df.hours_otherdomestic
-    df.birthmo_jul_x_cent = df.birthmo_jul .* df.birthmo_cent   # manual interaction for lm()
-    df.schage_cat         = string.(df.schage)                   # categorical FE for lm()
+    df.birthmo_jul_x_cent = df.birthmo_jul .* df.birthmo_cent
+    df.schage_cat         = string.(df.schage)
 
     dvs = [:hours_he, :hours_domestic, :hours_econ, :hazard]
 

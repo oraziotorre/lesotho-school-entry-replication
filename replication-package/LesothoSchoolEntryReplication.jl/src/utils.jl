@@ -5,6 +5,8 @@ using Plots
 using Plots.PlotMeasures
 using GLM
 using StatsModels
+using Random
+
 
 const MONTH_LABELS = [
     "Jan","Feb","Mar","Apr","May","Jun",
@@ -43,31 +45,15 @@ function mean_se(x)
 end
 
 
-function add_ci!(
-    df;
-    ycol = :y,
-    secol = :se_y,
-    z = 1.96
-)
-
+function add_ci!(df; ycol = :y, secol = :se_y, z = 1.96)
     df.yu = df[!, ycol] .+ z .* df[!, secol]
     df.yl = df[!, ycol] .- z .* df[!, secol]
-
     return df
 end
 
 
-function regression_by_group(
-    df;
-
-    groupvar,
-    formula,
-
-    minobs = 10
-)
-
+function regression_by_group(df; groupvar, formula, minobs = 10)
     groups = sort(unique(skipmissing(df[!, groupvar])))
-
     out = DataFrame(
         group = Int[],
         beta = Float64[],
@@ -75,24 +61,12 @@ function regression_by_group(
     )
 
     for g in groups
-
         subdf = filter(row -> row[groupvar] == g, df)
-
         nrow(subdf) < minobs && continue
-
         reg = lm(formula, subdf)
-
         beta = coef(reg)[2]
         se   = sqrt(vcov(reg)[2,2])
-
-        push!(
-            out,
-            (
-                group = g,
-                beta = beta,
-                se = se
-            )
-        )
+        push!(out, (group = g, beta = beta, se = se))
     end
 
     add_ci!(out, ycol = :beta, secol = :se)
@@ -101,17 +75,9 @@ function regression_by_group(
 end
 
 
-function grouped_weighted_mean(
-    df;
-
-    groupvars,
-    value,
-    weight
-)
-
+function grouped_weighted_mean(df; groupvars, value, weight)
     combine(
         groupby(df, groupvars),
-
         [value, weight] =>
             ((y, w) -> (
                 y = weighted_mean(y, w),
@@ -254,7 +220,6 @@ function scatter_ci_plot(
         top_margin    = 5mm,
     )
 
-    # Apply grid style separately — avoids recipe dispatch ambiguity
     plot!(p;
         grid      = true,
         gridstyle = :dot,
@@ -298,14 +263,8 @@ function check_controls(fe_models)
 
     for m in fe_models
         cn = coefnames(m)
-
-        # Check (Born July to December) x MOB = interaction birthmo_jul & birthmo_cent
         has_interaction = any(occursin("birthmo_jul", c) && occursin("birthmo_cent", c) for c in cn)
-
-        # Check MOB = birthmo_cent is in the model
         has_mob = "birthmo_cent" in cn
-
-        # Check School age indicators = schage absorbed as fixed effect
         fe_names = String.(m.fekeys)
         has_schage_fe = any(occursin("schage", f) for f in fe_names)
 
@@ -321,3 +280,99 @@ unlabel(x) = ismissing(x) ? missing : Float64(ReadStatTables.value(x))
 unlabel_int(x) = ismissing(x) ? missing : Int(ReadStatTables.value(x))
 
 
+
+# =========================================================
+# TESTING UTILITIES
+# =========================================================
+
+
+function mock_main_df(n = 500)
+
+    Random.seed!(1234)
+
+    DataFrame(
+
+        birthyr = rand(2010:2014, n),
+
+        birthmoyr = rand(1:36, n),
+
+        birthmo = rand(1:12, n),
+
+        grade1ormore = rand(n),
+
+        grade = rand(1:3, n),
+
+        grade_r = rand(0:1, n),
+
+        schage = rand(3:19, n),
+
+        educ = rand(n) .* 10,
+
+        birthmo_jul = rand(0:1, n),
+
+        birthmo_cent = randn(n),
+
+        age = rand(25:49, n),
+
+        fem = rand(0:1, n),
+
+        year = rand(2010:2018, n),
+
+        AtLeast1 = rand(0:1, n),
+        AtLeast2 = rand(0:1, n),
+        AtLeast3 = rand(0:1, n),
+        AtLeast4 = rand(0:1, n),
+        AtLeast5 = rand(0:1, n),
+        AtLeast6 = rand(0:1, n),
+        AtLeast7 = rand(0:1, n),
+        AtLeast8 = rand(0:1, n),
+        AtLeast9 = rand(0:1, n),
+        AtLeast10 = rand(0:1, n),
+        AtLeast11 = rand(0:1, n),
+        AtLeast12 = rand(0:1, n),
+        AtLeast13 = rand(0:1, n),
+        AtLeast14 = rand(0:1, n)
+    )
+end
+
+
+
+function mock_bh_df(n = 300)
+
+    Random.seed!(1234)
+
+    DataFrame(
+
+        brthord = rand(1:3, n),
+
+        birthmo_child = rand(1:12, n),
+
+        momsec = rand(n)
+    )
+end
+
+
+
+function mock_fs_df(n = 300)
+
+    Random.seed!(1234)
+
+    DataFrame(
+
+        schage = rand(7:14, n),
+
+        birthmo_jul = rand(0:1, n),
+
+        schagecat2_from5 = rand([7, 9, 11, 13], n),
+
+        readsk_s = rand(n),
+
+        readsk_e = rand(n),
+
+        numbskill = rand(n),
+
+        read = rand(n),
+
+        fsweight = rand(n) .* 5
+    )
+end
