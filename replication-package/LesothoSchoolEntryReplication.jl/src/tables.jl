@@ -8,7 +8,7 @@ using GLM
 
 
 function write_table2(fe_models, margins_results, nobs_list, r2_list, output_file)
-    lw, cw = 30, 9                  # label width, column width
+    lw, cw = 30, 9
     sep = "─"^(lw + cw * 8)
 
     ctrl_interaction, ctrl_mob, ctrl_schage = check_controls(fe_models)
@@ -18,26 +18,25 @@ function write_table2(fe_models, margins_results, nobs_list, r2_list, output_fil
     subsamples = repeat(["Female", "Male"], 4)
     col_nums   = ["($i)" for i in 1:8]
 
-    # extract the birthmo_jul coefficient and its SE from a single model
     function get_coef_se(m)
         vals = Dict(zip(coefnames(m), coef(m)))
         errs = Dict(zip(coefnames(m), stderror(m)))
         get(vals, "birthmo_jul", NaN), get(errs, "birthmo_jul", NaN)
     end
+
     coef_se = get_coef_se.(fe_models)
     coefs   = first.(coef_se)
     ses     = last.(coef_se)
 
     fmt(x)   = string(round(x, digits=3))
     padl(s)  = lpad(s, cw)
-    padl2(s) = lpad(s, 2cw)   # double-width for DV headers spanning two columns
+    padl2(s) = lpad(s, 2cw)
 
     open(output_file, "w") do io
         println(io, sep)
         println(io, "TABLE 2: EFFECT OF AGE AT SCHOOL ENTRY ON CHILDREN'S TIME USE BY GENDER")
         println(io, sep)
 
-        # header rows: DV names, units, subsample (F/M), column numbers
         print(io, rpad("Dependent variable (DV):", lw))
         foreach(l -> print(io, padl2(l)), dv_labels)
         println(io)
@@ -55,7 +54,6 @@ function write_table2(fe_models, margins_results, nobs_list, r2_list, output_fil
         println(io)
         println(io, sep)
 
-        # main coefficient row + SE row
         print(io, rpad("Born July to December (= 1)", lw))
         foreach(v -> print(io, padl(fmt(v))), coefs)
         println(io)
@@ -65,7 +63,6 @@ function write_table2(fe_models, margins_results, nobs_list, r2_list, output_fil
         println(io)
         println(io)
 
-        # control indicators (Yes/No flags returned by check_controls)
         println(io, rpad("Controls", lw))
         for (label, vals) in [
             ("  (Born July to December) x MOB", ctrl_interaction),
@@ -78,7 +75,6 @@ function write_table2(fe_models, margins_results, nobs_list, r2_list, output_fil
         end
         println(io, sep)
 
-        # bottom panel: margins, sample size, R²
         print(io, rpad("Mean DV, lower limit", lw))
         foreach(v -> print(io, padl(fmt(v))), margins_results)
         println(io)
@@ -97,21 +93,19 @@ end
 
 
 function run_table2(df, tables_output_path)
-    # ReadStatTables wraps values in tagged types; strip them back to plain Julia values
+    
     for col in names(df)
         df[!, col] = map(x -> ismissing(x) ? missing : unwrap(x), df[!, col])
     end
-    # FixedEffectModels requires Float64; promote any Float32 columns
+    
     for col in names(df)
         eltype(skipmissing(df[!, col])) == Float32 || continue
         df[!, col] = map(x -> ismissing(x) ? missing : Float64(x), df[!, col])
     end
 
-    # keep only children of school age (10–14) with complete time-use records
     filter!(row -> !ismissing(row.schage) && 10 <= row.schage <= 14, df)
     dropmissing!(df, [:hours_he, :hours_wafi, :hours_otherdomestic, :hours_econ])
 
-    # derived variables used across all models
     df.hours_domestic     = df.hours_wafi .+ df.hours_otherdomestic
     df.birthmo_jul_x_cent = df.birthmo_jul .* df.birthmo_cent   # manual interaction for lm()
     df.schage_cat         = string.(df.schage)                   # categorical FE for lm()
@@ -123,9 +117,6 @@ function run_table2(df, tables_output_path)
     nobs_list       = Int[]
     r2_list         = Float64[]
 
-    # estimate two models per DV × gender cell:
-    #   m_fe  — FE regression used for the reported coefficients
-    #   m_lm  — plain OLS used only to compute the marginal mean at the lower age limit
     for dv in dvs, is_fem in (1, 0)
         df_sub = filter(row -> !ismissing(row.fem) && row.fem == is_fem, df)
         dropmissing!(df_sub, [dv, :birthmo_jul, :birthmo_cent, :schage])
