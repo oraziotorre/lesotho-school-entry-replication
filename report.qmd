@@ -118,7 +118,7 @@ Figure 3 is a placebo test for the identifying assumption of the RDD: if being b
 Our replication uses the MICS birth history data (`micsbh.dta`), restricting to first-born children of eligible mothers. We find no evidence of a discontinuity at the threshold, consistent with the paper's original finding. The scatter of means and confidence intervals around a flat level of roughly 0.55–0.60 is well reproduced.
 
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures/placebo_maternaleducation.png)
-![Original version]
+![Original version](replication-package/original-replication/Output/Figures/placebo_maternaleducation.png)
 
 ## Figure 5: Reversal of Early Disadvantage for Cohorts Born July–December
 
@@ -137,5 +137,5 @@ Our replication uses the MICS 2018 foundational skills data (`mics6fs.dta`), com
 
 
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures/skills_kids.png)
-![Original version] (replication-package/original-replication/Output/Figures/skills_kids.png)
+![Original version](replication-package/original-replication/Output/Figures/skills_kids.png)
 

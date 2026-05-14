@@ -219,7 +219,7 @@ E[Y_i \mid \text{MOB}_i] = \beta_0 + \beta_1(\text{MOB}_i) + \beta_2 \times \mat
 <p>Our replication reproduces both panels using the MICS 2018 household data (<code>mics6hl.dta</code>). We compute group means with 95% confidence intervals and overlay a vertical dashed line at the June/July threshold. The main pattern — the sharp jump in enrollment probability between June- and July-born children of roughly 40 percentage points in Panel A, and the half-year gap in average age at entry in Panel B — is successfully reproduced.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="replication-package/LesothoSchoolEntryReplication.jl/output/figures%20/MOB_and_SchoolEntry.png" class="img-fluid figure-img"></p>
+<p><img src="replication-package/LesothoSchoolEntryReplication.jl/output/figures/MOB_and_SchoolEntry.png" class="img-fluid figure-img"></p>
 <figcaption>Replicated version</figcaption>
 </figure>
 </div>
@@ -230,7 +230,7 @@ E[Y_i \mid \text{MOB}_i] = \beta_0 + \beta_1(\text{MOB}_i) + \beta_2 \times \mat
 <p>Our replication uses the MICS birth history data (<code>micsbh.dta</code>), restricting to first-born children of eligible mothers. We find no evidence of a discontinuity at the threshold, consistent with the paper’s original finding. The scatter of means and confidence intervals around a flat level of roughly 0.55–0.60 is well reproduced.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="replication-package/LesothoSchoolEntryReplication.jl/output%20/placebo_maternaleducation.png" class="img-fluid figure-img"></p>
+<p><img src="replication-package/LesothoSchoolEntryReplication.jl/output/figures/placebo_maternaleducation.png" class="img-fluid figure-img"></p>
 <figcaption>Replicated version</figcaption>
 </figure>
 </div>
@@ -241,7 +241,7 @@ E[Y_i \mid \text{MOB}_i] = \beta_0 + \beta_1(\text{MOB}_i) + \beta_2 \times \mat
 <p>We estimate simple OLS regressions of years of education (<code>educ</code>) on the treatment indicator (<code>birthmo_jul</code>) separately for each age group, using MICS 2018 household data. We plot the coefficient estimates and 95% confidence intervals. Our replicated figure successfully captures the reversal: a negative coefficient in early childhood, crossing zero in early adolescence, and turning positive and growing by late adolescence.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="replication-package/LesothoSchoolEntryReplication.jl/output/figures%20/Reversal_of_fortunes.png" class="img-fluid figure-img"></p>
+<p><img src="replication-package/LesothoSchoolEntryReplication.jl/output/figures/Reversal_of_fortunes.png" class="img-fluid figure-img"></p>
 <figcaption>Replicated version</figcaption>
 </figure>
 </div>
@@ -252,7 +252,7 @@ E[Y_i \mid \text{MOB}_i] = \beta_0 + \beta_1(\text{MOB}_i) + \beta_2 \times \mat
 <p>Our replication uses the MICS 2018 foundational skills data (<code>mics6fs.dta</code>), computing weighted means by age group (7–8, 9–10, 11–12, 13–14) and birth month group (Jan–Jun vs Jul–Dec), using survey weights. The bar chart format, color scheme, and age groupings match the paper. The main patterns are replicated: the initial advantage of early entrants in all four outcomes at ages 7–8, and the narrowing or reversal of this gap at older age groups. A limitation is that the paper uses <code>rdplot</code>-based estimates for each age bin while our version shows raw weighted means.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="replication-package/LesothoSchoolEntryReplication.jl/output/figures%20/skills_kids.png" class="img-fluid figure-img"></p>
+<p><img src="replication-package/LesothoSchoolEntryReplication.jl/output/figures/skills_kids.png" class="img-fluid figure-img"></p>
 <figcaption>Replicated version</figcaption>
 </figure>
 </div>
