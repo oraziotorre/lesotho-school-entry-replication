@@ -86,6 +86,7 @@ Here are the original package's computational requirements:
 ## Our Computational setup
 - Windows Laptop IdeaPad Slim 5 14IMH9, Windows 11 Home, Intel Core Ultra 7 155H 1.40 GHz, 32 GB RAM, 64-bit operating system 
 - Windows Laptop Yoga 7 2-in-1 14IML9, Windows 11 Home, Intel Core Ultra 7 155H 1.40 GHz, 32 GB RAM, 64-bit operating system
+- Windows Laptop TF114Vp6, Windows 10 Home, Intel Core i3-7020U 2.30 GHz, 8 GB RAM, 64-bit operating system
 
 Software used:
 - Julia 1.12.6
