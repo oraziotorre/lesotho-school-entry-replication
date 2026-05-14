@@ -110,7 +110,7 @@ The original Figure 1 has two panels. Panel A shows the probability of currently
 Our replication reproduces both panels using the MICS 2018 household data (`mics6hl.dta`). We compute group means with 95% confidence intervals and overlay a vertical dashed line at the June/July threshold. The main pattern — the sharp jump in enrollment probability between June- and July-born children of roughly 40 percentage points in Panel A, and the half-year gap in average age at entry in Panel B — is successfully reproduced. 
 
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures/MOB_and_SchoolEntry.png)
-![Original version]
+![Original version](replication-package/original-replication/Output/Figures/MOB_and_SchoolEntry.png)
 
 ## Figure 3: Continuity in Pre-treatment Characteristics — Maternal Education
 Figure 3 is a placebo test for the identifying assumption of the RDD: if being born just after June 30 (rather than just before) only affects later outcomes through delayed school entry, then there should be no discontinuity in pre-determined characteristics. The figure shows the probability that a mother attained secondary education by the month of birth of her first child. Under the null of no manipulation or selection, this relationship should be smooth across the June/July threshold.
@@ -127,7 +127,7 @@ Figure 5 is one of the central results of the paper. It shows that children born
 We estimate simple OLS regressions of years of education (`educ`) on the treatment indicator (`birthmo_jul`) separately for each age group, using MICS 2018 household data. We plot the coefficient estimates and 95% confidence intervals. Our replicated figure successfully captures the reversal: a negative coefficient in early childhood, crossing zero in early adolescence, and turning positive and growing by late adolescence. 
 
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures/Reversal_of_fortunes.png)
-![Original version]
+![Original version](replication-package/original-replication/Output/Figures/Reversal_of_fortunes.png)
 
 ## Figure 18: Foundational Skills and Home Reading by Age and Month of Birth
 
