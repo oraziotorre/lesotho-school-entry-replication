@@ -1,0 +1,24 @@
+1. DHS (Demographic Health Survey):
+The DHS dataset is shared under a custom restricted-use license governed by the DHS Program.
+- Usage: Data are provided free of charge for legitimate academic, research, and policy purposes. Users must agree to the DHS Terms of Use and obtain registration approval.
+- Restrictions: Commercial usage is prohibited, and users must not share raw data with unauthorised individuals.
+ 
+2. IPUMS (Integrated Public Use Microdata Series):
+IPUMS retains copyright over their packaged data extracts and shares them under IPUMS-specific terms.
+- Usage: Data are licensed for scholarly research and educational purposes only. Explicit commercial use is strictly prohibited, and all users must register and agree to an annual terms-of-use agreement. Redistribution to non-registered individuals is not allowed.
+- Restrictions: These are treated as internal-use-only, meaning extracts are available exclusively to approved users, and sharing is strictly prohibited. Confidentiality must be maintained, including non-disclosure of direct identifiers.
+ 
+3. MICS (Multiple Indicator Cluster Surveys):
+A UNICEF-specific memorandum of understanding governs MICS data use and data use terms.
+- Usage: Data are provided free of charge for non-commercial, research, academic, and policy use. Access requires registration and approval from UNICEF or national authorities.
+- Restrictions: Users must safeguard respondent confidentiality, not redistribute the datasets, and properly cite UNICEF MICS in all outputs.
+
+4. SACMEQ (Southern Africa Consortium on Monitoring Educational Quality):
+The SACMEQ data archive is governed by the Southern and Eastern Africa Consortium for Monitoring Educational Quality Co-ordinating Centre.
+- Usage: Data are provided free of charge to eligible users; users must agree to the “Terms and Conditions for the Use of the SEACMEQ Data Archive” 
+- Restrictions: Commercial usage is prohibited. Users must not share raw data with those not registered, and users shall give due credit to SEACMEQ for providing the Data Archive in all outputs.
+
+5. World Bank Development Indicators:
+The World Bank Group makes data publicly available according to open data standards and licenses datasets under the Creative Commons Attribution 4.0 International license (CC-BY 4.0).
+- Usage: Users can copy, modify, and distribute data in any format for any purpose, including commercial use. CC-BY 4.0 is the default license for all Datasets produced by the World Bank itself and distributed as open data.
+- Restrictions: obligated to give appropriate credit (attribution) and indicate if any changes were made, including translations.

@@ -79,7 +79,6 @@ replication-package/original-replication/Raw_data/SACMEQ/2007/SACMEQ III - 15_fi
 *.tab
 *.TAB
 # Sometimes, these are data files, too
-*.txt
 *.TXT
 *.asc
 *.ASC
