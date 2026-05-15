@@ -541,8 +541,8 @@ function run_figure18(df_fs, FIGURES)
     p = plot(
         pA, pB, pC, pD,
         layout = (2, 2),
-        size   = (900, 700),
-        dpi    = 150
+        size   = (700, 550),
+        dpi    = 110 
     )
 
     output_path = joinpath(FIGURES, "skills_kids.png")

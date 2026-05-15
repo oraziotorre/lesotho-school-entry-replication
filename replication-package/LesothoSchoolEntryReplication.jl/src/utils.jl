@@ -352,27 +352,25 @@ function mock_bh_df(n = 300)
 end
 
 
-
 function mock_fs_df(n = 300)
-
     Random.seed!(1234)
 
     DataFrame(
-
-        schage = rand(7:14, n),
-
-        birthmo_jul = rand(0:1, n),
-
-        schagecat2_from5 = rand([7, 9, 11, 13], n),
-
-        readsk_s = rand(n),
-
-        readsk_e = rand(n),
-
-        numbskill = rand(n),
-
-        read = rand(n),
-
-        fsweight = rand(n) .* 5
+        schage              = rand(10:14, n),
+        birthmo             = rand(1:12, n),
+        birthmo_jul         = rand(0:1, n),
+        birthmo_cent        = randn(n),
+        fem                 = rand(0:1, n),
+        hours_he            = rand(n) .* 10,
+        hours_wafi          = rand(n) .* 5,
+        hours_otherdomestic = rand(n) .* 5,
+        hours_econ          = rand(n) .* 8,
+        hazard              = rand(n),
+        schagecat2_from5    = rand([7, 9, 11, 13], n),
+        readsk_s            = rand(n),
+        readsk_e            = rand(n),
+        numbskill           = rand(n),
+        read                = rand(n),
+        fsweight            = rand(n) .* 5
     )
 end

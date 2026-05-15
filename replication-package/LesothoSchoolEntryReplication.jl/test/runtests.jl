@@ -2,6 +2,7 @@ using TestItemRunner
 
 using LesothoSchoolEntryReplication
  
+
 @run_package_tests
  
 
@@ -34,6 +35,24 @@ end
     p = figure_1B(df)
 
     @test true
+end
+
+
+@testitem "run_figure1 works" begin
+
+    df = mock_main_df()
+
+    mktempdir() do tmpdir
+
+        run_figure1(df, tmpdir)
+
+        outfile = joinpath(
+            tmpdir,
+            "MOB_and_SchoolEntry.png"
+        )
+
+        @test isfile(outfile)
+    end
 end
 
 
@@ -99,6 +118,24 @@ end
         outfile = joinpath(
             tmpdir,
             "skills_kids.png"
+        )
+
+        @test isfile(outfile)
+    end
+end
+
+
+@testitem "run_table2 works" begin
+
+    df = mock_fs_df()
+
+    mktempdir() do tmpdir
+
+        run_table2(df, tmpdir)
+
+        outfile = joinpath(
+            tmpdir,
+            "opportunity_costs.txt"
         )
 
         @test isfile(outfile)
