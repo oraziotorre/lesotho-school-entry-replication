@@ -108,22 +108,17 @@ The original Figure 1 has two panels. Panel A shows the probability of currently
 
 Our replication reproduces both panels using the MICS 2018 household data (`mics6hl.dta`). We compute group means with 95% confidence intervals and overlay a vertical dashed line at the June/July threshold. The main pattern, the sharp jump in enrollment probability between June, and July-born children of roughly 40 percentage points in Panel A, and the half-year gap in average age at entry in Panel B, is successfully reproduced. 
 
-::: {#fig-figure1 layout-ncol=2}
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures/MOB_and_SchoolEntry.png)
 ![Original version](replication-package/original-replication/Output/Figures/MOB_and_SchoolEntry.jpg)
-:::
 
 ## Figure 3: Continuity in Pre-treatment Characteristics — Maternal Education
 Figure 3 is a placebo test for the identifying assumption of the RDD: if being born just after June 30 (rather than just before) only affects later outcomes through delayed school entry, then there should be no discontinuity in pre-determined characteristics. The figure shows the probability that a mother attained secondary education by the month of birth of her first child. Under the null of no manipulation or selection, this relationship should be smooth across the June/July threshold.
 
 Our replication uses the MICS birth history data (`micsbh.dta`), restricting to first-born children of eligible mothers. We find no evidence of a discontinuity at the threshold, consistent with the paper's original finding. The scatter of means and confidence intervals around a flat level of roughly 0.55–0.60 is well reproduced.
 
-::: {#fig-figure3 layout-ncol=2}
-
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures/placebo_maternaleducation.png)
 ![Original version](replication-package/original-replication/Output/Figures/placebo_maternaleducation.jpg)
 
-:::
 
 ## Figure 5: Reversal of Early Disadvantage for Cohorts Born July–December
 
@@ -132,12 +127,9 @@ Figure 5 is one of the central results of the paper. It shows that children born
 We estimate simple OLS regressions of years of education (`educ`) on the treatment indicator (`birthmo_jul`) separately for each age group, using MICS 2018 household data. We plot the coefficient estimates and 95% confidence intervals. Our replicated figure successfully captures the reversal: a negative coefficient in early childhood, crossing zero in early adolescence, and turning positive and growing by late adolescence. 
 We can note a visual difference in how the 95% confidence intervals are rendered. The original Stata figure draws a continuous shaded envelope, two dashed lines tracing the upper and lower CI bounds and forming a band around the coefficient series. Our Julia replication instead uses discrete error bars at each age point (vertical lines with horizontal caps), which is the default style of `Plots.jl` and the `add_errorbars!` helper in `utils.jl`.
 
-::: {#fig-figure5 layout-ncol=2}
-
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures/Reversal_of_fortunes.png)
 ![Original version](replication-package/original-replication/Output/Figures/Reversal_of_fortunes.jpg)
 
-:::
 
 ## Figure 18: Foundational Skills and Home Reading by Age and Month of Birth
 
@@ -145,13 +137,8 @@ Figure 18 shows how foundational learning skills and home reading habits evolve 
 
 Our replication uses the MICS 2018 foundational skills data (`mics6fs.dta`), computing weighted means by age group (7–8, 9–10, 11–12, 13–14) and birth month group (Jan–Jun vs Jul–Dec), using survey weights. The bar chart format, color scheme, and age groupings match the paper. The main patterns are replicated: the initial advantage of early entrants in all four outcomes at ages 7–8, and the narrowing or reversal of this gap at older age groups. A limitation is that the paper uses `rdplot`-based estimates for each age bin while our version shows raw weighted means.
 
-::: {#fig-figure18 layout-ncol=2}
-
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures/skills_kids.png)
 ![Original version](replication-package/original-replication/Output/Figures/skills_kids.jpg)
-
-:::
-
 
 ## Table 2 — Effect of Age at School Entry on Children's Time Use by Gender
 This table presents the effect of age at school entry on out-of-school time use for children aged 10–14, separately by gender, estimating eight fixed-effects regressions (four outcomes × two genders) of the form:
