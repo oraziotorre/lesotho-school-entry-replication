@@ -82,18 +82,19 @@ Our replication was run across the following machines:
 - Windows Laptop TF114Vp6, Windows 10 Home, Intel Core i3-7020U 2.30 GHz, 8 GB RAM, 64-bit operating system
 
 Software used:
-- Julia 1.12.6
-- `ReadStatTables.jl` v0.6, reading Stata `.dta` files
-- `DataFrames.jl` v1.7, data manipulation
-- `FixedEffectModels.jl` v1.10, fixed-effects OLS regression (equivalent to Stata's `reghdfe`); used in `tables.jl` for the eight regressions in Table 2
-- `RegressionTables.jl`, loaded alongside `FixedEffectModels.jl` in `tables.jl` for model introspection utilities
-- `GLM.jl` v1.9, standard OLS; used in `figures.jl` (`regression_by_group` for Figure 5) and in `tables.jl` (`calculate_margin` companion models for Table 2)
-- `StatsModels.jl`, formula interface shared by `GLM.jl` and `FixedEffectModels.jl`
-- `Plots.jl` v1.40, all figure production (`figures.jl`)
-- `Plots.PlotMeasures`, margin utilities for figure layout
-- `Statistics.jl`, `mean`, `std` used throughout `utils.jl`
-- `Random.jl`, seeded random data generation in the mock data helpers (`mock_main_df`, `mock_bh_df`, `mock_fs_df`) used by the test suite
-- Quarto 1.9.3
+
+  - Julia 1.12.6
+  - `ReadStatTables.jl` v0.6, reading Stata `.dta` files
+  - `DataFrames.jl` v1.7, data manipulation
+  - `FixedEffectModels.jl` v1.10, fixed-effects OLS regression (equivalent to Stata's `reghdfe`); used in `tables.jl` for the eight regressions in Table 2
+  - `RegressionTables.jl`, loaded alongside `FixedEffectModels.jl` in `tables.jl` for model introspection utilities
+  - `GLM.jl` v1.9, standard OLS; used in `figures.jl` (`regression_by_group` for Figure 5) and in `tables.jl` (`calculate_margin` companion models for Table 2)
+  - `StatsModels.jl`, formula interface shared by `GLM.jl` and `FixedEffectModels.jl`
+  - `Plots.jl` v1.40, all figure production (`figures.jl`)
+  - `Plots.PlotMeasures`, margin utilities for figure layout
+  - `Statistics.jl`, `mean`, `std` used throughout `utils.jl`
+  - `Random.jl`, seeded random data generation in the mock data helpers (`mock_main_df`, `mock_bh_df`, `mock_fs_df`) used by the test suite
+  - Quarto 1.9.3
 
 
 
@@ -110,6 +111,7 @@ Our replication reproduces both panels using the MICS 2018 household data (`mics
 ::: {#fig-figure1 layout-ncol=2}
 ![Replicated version](replication-package/LesothoSchoolEntryReplication.jl/output/figures/MOB_and_SchoolEntry.png)
 ![Original version](replication-package/original-replication/Output/Figures/MOB_and_SchoolEntry.jpg)
+:::
 
 ## Figure 3: Continuity in Pre-treatment Characteristics — Maternal Education
 Figure 3 is a placebo test for the identifying assumption of the RDD: if being born just after June 30 (rather than just before) only affects later outcomes through delayed school entry, then there should be no discontinuity in pre-determined characteristics. The figure shows the probability that a mother attained secondary education by the month of birth of her first child. Under the null of no manipulation or selection, this relationship should be smooth across the June/July threshold.
