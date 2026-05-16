@@ -37,7 +37,7 @@ We have been able to replicate the following exhibits:
 2. Figure 3 : Continuity in pre-treatment characteristics: maternal education
 3. Figure 5 : Reversal of early disadvantage for cohorts born July–December
 4. Figure 18 : Foundational reading, numeracy skills, and home reading habits by age and month of birth
-5. Table 2 — Effect of age at school entry on children's time use by gender
+5. Table 2 : Effect of age at school entry on children's time use by gender
 
 > **Partial results and caveats:** The original paper uses Stata for all estimation and figure production. We replicated the analysis in Julia using the `FixedEffectModels.jl`, `GLM.jl` and `Plots.jl` files. The four figures are successfully replicated, some minor visual differences arise from differences between Julia's `Plots.jl` and Stata's `rdplot` command.
 
