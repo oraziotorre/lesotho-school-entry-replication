@@ -115,7 +115,7 @@ The package is organized around five main files:
   Serves as the entry point for the full replication pipeline. It defines file paths, loads the original `.dta` datasets and calls the figure and table generation.
 
 - `LesothoSchoolEntryReplication.jl`  
-  Defines the main Julia module of the package. This file exports the public API and includes all source files (`utils.jl`, `figures.jl`, `tables.jl`, and `run_all.jl`) into a single package namespace.
+  Defines the main Julia module of the package. This file includes all source files (`utils.jl`, `figures.jl`, `tables.jl`, and `run_all.jl`) into a single package namespace.
 
 In addition, the package includes a dedicated testing suite:
 
