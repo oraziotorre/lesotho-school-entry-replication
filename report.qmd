@@ -19,7 +19,7 @@ author:
 
 # Collegio Carlo Alberto Replication Project
 
-This report was created as part of the assessment for the [`Computational Economics` Course](https://floswald.github.io/CompEcon/) in the PhD program at Collegio Carlo Alberto taught by [Florian Oswald](https://floswald.github.io/).
+This report was created as part of the assessment for the [`Computational Economics Course'](https://floswald.github.io/CompEcon/) in the PhD program at Collegio Carlo Alberto taught by [Florian Oswald](https://floswald.github.io/).
 
 :::
 ## Paper and Replication Package
@@ -31,13 +31,7 @@ This report attempts a replication of
 
 by using the `julia` computation language.
 
-We have been able to replicate the following exhibits:
-
-1. Figure 1 : Month of birth and entry into primary school
-2. Figure 3 : Continuity in pre-treatment characteristics: maternal education
-3. Figure 5 : Reversal of early disadvantage for cohorts born July–December
-4. Figure 18 : Foundational reading, numeracy skills, and home reading habits by age and month of birth
-5. Table 2 : Effect of age at school entry on children's time use by gender
+We have been able to replicate 4 different figures and one table.
 
 > **Partial results and caveats:** The original paper uses Stata for all estimation and figure production. We replicated the analysis in Julia using `ReadStatTables.jl` (data ingestion), `DataFrames.jl` (data manipulation), `FixedEffectModels.jl` and `RegressionTables.jl` (fixed-effects regression, equivalent to Stata's `reghdfe`), `GLM.jl` and `StatsModels.jl` (OLS and formula interface), `Plots.jl` with `PlotMeasures` (figure production), and `Statistics.jl` and `Random.jl` from the standard library. All four figures and Table 2 are successfully replicated. Minor visual differences in the figures arise from differences between Julia's `Plots.jl` and Stata's `rdplot` command. In particular, the confidence intervals in Figure 5 are rendered as discrete error bars in our version rather than as a continuous shaded band as in the original.
 
@@ -77,6 +71,7 @@ Here are the original package's computational requirements:
 
 ## Our Computational setup
 Our replication was run across the following machines:
+
 - Windows Laptop IdeaPad Slim 5 14IMH9, Windows 11 Home, Intel Core Ultra 7 155H 1.40 GHz, 32 GB RAM, 64-bit operating system 
 - Windows Laptop Yoga 7 2-in-1 14IML9, Windows 11 Home, Intel Core Ultra 7 155H 1.40 GHz, 32 GB RAM, 64-bit operating system
 - Windows Laptop TF114Vp6, Windows 10 Home, Intel Core i3-7020U 2.30 GHz, 8 GB RAM, 64-bit operating system
