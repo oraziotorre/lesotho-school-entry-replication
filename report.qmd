@@ -120,7 +120,7 @@ The package is organized around five main files:
 In addition, the package includes a dedicated testing suite:
 
 - `test/runtests.jl`  
-  Contains the unit tests implemented with `TestItemRunner.jl`. The tests validate both low-level statistical utilities and the complete figure/table generation pipeline using synthetic mock datasets. This structure makes the package reproducible even without distributing the restricted MICS microdata.
+  Contains the unit tests implemented with `TestItemRunner.jl`. The tests validate the complete figure/table generation pipeline using synthetic mock datasets.
 
 # Replication
 
