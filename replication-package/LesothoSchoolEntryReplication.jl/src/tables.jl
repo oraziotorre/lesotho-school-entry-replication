@@ -104,7 +104,8 @@ function run_table2(df, tables_output_path)
     - `df`: The input DataFrame containing demographic and time-use variables.
     - `tables_output_path`: The directory path where the resulting text file will be written.
     """
-
+    
+    @info "Creating Table 2..."
 
     for col in names(df)
         df[!, col] = map(x -> ismissing(x) ? missing : unwrap(x), df[!, col])
@@ -151,14 +152,17 @@ function run_table2(df, tables_output_path)
     output_file = joinpath(tables_output_path, "opportunity_costs.txt")
     touch(output_file)
     write_table2(fe_models, margins_results, nobs_list, r2_list, output_file)
+
+    @info "Table 2 completed."
+
 end
 
 
 function run_all_tables(MICS_DATA, TABLES)
+
     include(joinpath(@__DIR__, "..", "src", "utils.jl"))
     df = DataFrame(readstat(joinpath(MICS_DATA, "mics6fs.dta")))
 
-    @info "Creating Table 2..."
     run_table2(df, TABLES)
-    @info "Table 2 completed."
+
 end

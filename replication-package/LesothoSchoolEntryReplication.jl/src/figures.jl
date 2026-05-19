@@ -18,6 +18,8 @@ function figure_1A(df)
     - `df`: The input DataFrame containing birth dates and schooling status.
     """
 
+    @info "Running Figure 1A"
+
     local_df = copy(df)
 
     local_df.birthyr      = Vector{Union{Missing,Int}}(local_df.birthyr)
@@ -73,6 +75,7 @@ function figure_1A(df)
     )
 
     return p
+
 end
 
 
@@ -87,6 +90,7 @@ function figure_1B(df)
     - `df`: The input DataFrame containing birth month, grade, and school age data.
     """
 
+    @info "Running Figure 1B"
 
     local_df = copy(df)
 
@@ -134,6 +138,7 @@ function figure_1B(df)
     )
 
     return p
+
 end
 
 
@@ -147,12 +152,11 @@ function run_figure1(df, FIGURES)
     - `df`: The input DataFrame.
     - `FIGURES`: The directory path where the combined plot will be saved.
     """
+    
+    @info "Creating Figure 1..."
 
-
-    @info "Running Figure 1A"
     pA = figure_1A(df)
 
-    @info "Running Figure 1B"
     pB = figure_1B(df)
 
     combined = plot(
@@ -172,6 +176,9 @@ function run_figure1(df, FIGURES)
     )
 
     savefig(combined, output_path)
+
+    @info "Figure 1 completed."
+
 end
 
 
@@ -187,6 +194,8 @@ function run_figure3(df, FIGURES)
     - `FIGURES`: The directory path where the plot will be saved.
     """
 
+    @info "Creating Figure 3..."
+    
     local_df = copy(df)
 
     local_df.brthord       = Vector{Union{Missing,Int}}(local_df.brthord)
@@ -235,6 +244,9 @@ function run_figure3(df, FIGURES)
     )
 
     savefig(p, output_path)
+
+    @info "Figure 3 completed."
+
 end
 
 
@@ -252,6 +264,8 @@ function run_figure5(df, FIGURES)
     - `df`: The input DataFrame
     - `FIGURES`: The directory path where the plot will be saved.
     """
+
+    @info "Creating Figure 5..."
 
     local_df = copy(df)
 
@@ -310,6 +324,8 @@ function run_figure5(df, FIGURES)
 
     output_path = joinpath(FIGURES, "Reversal_of_fortunes.png")
     savefig(p, output_path)
+
+    @info "Figure 5 completed."
 
 end
 
@@ -510,6 +526,7 @@ function skills_panel(df_fs, outcome_col::Symbol, panel_title::String, ytitle::S
     end
 
     return p
+
 end
 
 
@@ -525,6 +542,7 @@ function run_figure18(df_fs, FIGURES)
     - `FIGURES`: The directory path where the combined plot will be saved.
     """
 
+    @info "Creating Figure 18..."
 
     # Sesotho reading skills
     pA = skills_panel(df_fs, :readsk_s,  "(a) Sesotho reading skills",   "Pr(foundational reading skills Sesotho)")
@@ -548,6 +566,8 @@ function run_figure18(df_fs, FIGURES)
     output_path = joinpath(FIGURES, "skills_kids.png")
     savefig(p, output_path)
 
+    @info "Figure 18 completed."
+    
 end
 
 
@@ -555,24 +575,18 @@ end
 function run_all_figures(MICS_DATA, FIGURES)
 
     include(joinpath(@__DIR__, "..", "src", "utils.jl"))
+    
     df = DataFrame(readstat(joinpath(MICS_DATA, "mics6hl.dta")))
     df_bh = DataFrame(readstat(joinpath(MICS_DATA, "micsbh.dta")))
     df_fs = DataFrame(readstat(joinpath(MICS_DATA, "mics6fs.dta")))
 
-    @info "Creating Figure 1..."
+
     run_figure1(df, FIGURES)
-    @info "Figure 1 completed."
 
-    @info "Creating Figure 3..."
     run_figure3(df_bh, FIGURES)
-    @info "Figure 3 completed."
 
-    @info "Creating Figure 5..."
     run_figure5(df, FIGURES)
-    @info "Figure 5 completed."
-
-    @info "Creating Figure 18..."
+    
     run_figure18(df_fs, FIGURES)
-    @info "Figure 18 completed."
 
 end
